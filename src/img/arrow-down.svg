@@ -1,0 +1,14 @@
+<svg width="11" height="6" viewBox="0 0 11 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>arrow_d_icon</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(754 -34)">
+<g id="arrow_d_icon">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(-754 34)" fill="#6C8A9B"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 10.872 0.73025L 5.797 5.87025C 5.714 5.95425 5.606 5.99525 5.498 5.99525C 5.39 5.99525 5.282 5.95425 5.199 5.87025L 0.123 0.73025C -0.041 0.56325 -0.041 0.29225 0.123 0.12525C 0.288 -0.04175 0.556 -0.04175 0.72 0.12525L 5.498 4.96325L 10.275 0.12525C 10.44 -0.04175 10.708 -0.04175 10.872 0.12525C 11.037 0.29225 11.037 0.56325 10.872 0.73025Z"/>
+</defs>
+</svg>

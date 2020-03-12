@@ -1,0 +1,216 @@
+<form class="sidebar-menu sidebar-menu--side sidebar-menu--filters" id="catalog-filters">
+    <button type="button" class="close sidebar-menu-close hidden-md hidden-lg" aria-label="Close"><i class="isoi isoi-close" aria-hidden="true"></i></button>
+    <a class="sidebar-menu__header-link--inner hidden-md hidden-lg">
+        Подобрать
+    </a>
+    <div class="filter-apply-wrap hidden-md hidden-lg">
+        <button type="submit" class="catalog-apply btn btn-success" id="catalog-apply--mobile">Применить</button>
+    </div>
+    <input id="current-url" type="hidden" name="current-url" value="https://www.isolux.ru/stroymateriali/gipsokarton.html">
+    <input id="params-url" type="hidden" name="params-url" value="">
+    <div class="sidebar-menu__collapse collapse in is-hidden">
+        <ul class="sidebar-nav sidebar-menu__list">
+            <li class="sidebar-nav__item submenu js-slider-price">
+                <a class="sidebar-menu__header-link" data-toggle="collapse" href="#collapseCategoryPrice" aria-expanded="false" aria-controls="collapseCategoryPrice">
+                    Цена <span class="sidebar-menu__header-units">(Рубли)</span>
+                    <span class="catalog-filter--selected"></span>
+                    <span class="sidebar-menu__header-toggler"></span>
+                </a>
+                <div class="sidebar-menu__collapse catalog-filter__collapse collapse in is-hidden" id="collapseCategoryPrice">
+                    <div class="sidebar-menu__list">
+                        <a class="sidebar-menu__header-link--inner" data-toggle="collapse" href="#collapseCategory" aria-expanded="false" aria-controls="collapseCategory">
+                            Цена (Рубли)
+                        </a>
+                        <div class="sidebar-nav__item"><a class="sidebar-nav__link sidebar-menu-back" href="#"><span class="sidebar-nav__text">BACK</span></a></div>
+                        <div class="sidebar-menu__filters">
+                            <div class="filter-range-wrap">
+                                <div id="slider" class="js-slider mb-20" data-slider-param="price">
+                                    <input id="max-price" class="js-max-value" type="hidden" name="max-price" value="3526">
+                                    <input id="min-price" class="js-min-value" type="hidden" name="min-price" value="0">
+                                </div>
+                            </div>
+                            <div class="param-slider form-group">
+                                <div class="param-slider__col">
+                                    <input id="price-filter-min" class="pie js-filter-min form-control" type="number" name="price-filter" value="">
+                                </div>
+                                <label class="param-slider__sep control-label" for="price-filter-max">—</label>
+                                <div class="param-slider__col">
+                                    <input id="price-filter-max" class="pie js-filter-max form-control" type="number" name="price-filter" value="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="sidebar-nav__item submenu">
+                <a class="sidebar-menu__header-link collapsed" data-toggle="collapse" href="#collapseCategoryBrand" aria-expanded="false" aria-controls="collapseCategoryPrice">
+                    Бренд
+                    <span class="sidebar-menu__header-toggler"></span>
+                </a>
+                <div class="sidebar-menu__collapse catalog-filter__collapse collapse is-hidden" id="collapseCategoryBrand">
+                    <div class="sidebar-menu__list">
+                        <a class="sidebar-menu__header-link--inner" data-toggle="collapse" href="#collapseCategory" aria-expanded="false" aria-controls="collapseCategory">
+                            Бренд
+                        </a>
+                        <div class="sidebar-nav__item">
+                            <a class="sidebar-nav__link sidebar-menu-back" href="#">
+                                <span class="sidebar-nav__text">BACK</span>
+                            </a>
+                        </div>
+                        <div class="sidebar-menu__filters">
+                            <label class="filter-item visible custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__preview lozad" data-background-image="https://st0.isolux.ru/media/attribute_color/Hi-tech.jpg"></span>
+                                <span class="custom-control__description">Gyproc</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item visible custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001" checked>
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item visible custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001" checked>
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item visible custom-control custom-checkbox disabled">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001" disabled>
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item visible custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001" checked>
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001" checked>
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                                <label class="filter-item custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001" checked>
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17001">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item custom-control custom-checkbox" for="manufacturer_17005">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17005" id="manufacturer_17005">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item custom-control custom-checkbox" for="manufacturer_17004">
+                                <input type="checkbox" class="custom-control__input"  name="manufacturer" value="manufacturer=17004" id="manufacturer_17004">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Knauf</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                            <label class="filter-item custom-control custom-checkbox" for="manufacturer_17003">
+                                <input type="checkbox" class="custom-control__input" name="manufacturer" value="manufacturer=17003" id="manufacturer_17003" checked>
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">HAIL</span>
+                                <span class="sidebar-qty-label">26</span>
+                            </label>
+                        </div>
+                        <a class="sidebar-menu__more-link collapsed sidebar-menu__filters-more">
+                            <span class="sidebar-menu__more-show">Показать ещё</span><span class="sidebar-menu__more-hide">Скрыть</span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <button class="btn btn-outline-filter btn-block mt-10 mb-10" type="submit">ПРИМЕНИТЬ</button>
+    <button class="btn btn-outline-filter btn-block mb-10 catalog-reset" type="button" disabled>Очистить фильтр</button>
+    <div class="popover popover-iso right popover-filter" role="tooltip" id="submitPopover" style="top: 196px; left: 262px;">
+        <div class="arrow" style="top: 50%;"></div>
+        <span class="isoi isoi-close"></span>
+        <div class="popover-content"><button class="btn btn-outline-filter btn-block" type="submit" data-lh_name="416933201_field_26">ПРИМЕНИТЬ</button></div>
+    </div>
+</form>

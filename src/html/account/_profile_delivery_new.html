@@ -1,0 +1,142 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-2 hidden-xs hidden-sm">
+            <ul class="account-nav">
+                <li class="account-nav__item">
+                    <a class="account-nav__link" href="https://www.isolux.ru/customer/account/">Панель управления</a>
+                </li>
+                <li class="account-nav__item">
+                    <a class="account-nav__link" href="https://www.isolux.ru/customer/account/edit/">Данные учётной записи</a>
+                </li>
+                <li class="account-nav__item active">
+                    <a class="account-nav__link" href="https://www.isolux.ru/customer/address/">Мой профиль</a>
+                </li>
+                <li class="account-nav__item">
+                    <a class="account-nav__link" href="https://www.isolux.ru/sales/order/history/">Мои заказы</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-md-10">
+            <h1 class="inner-header-main account-head">Добавить новый профиль доставки</h1>
+
+            <form class="form-horizontal  form-custom account-form" action="https://www.isolux.ru/customer/address/formPost/" method="post" id="form-validate" onsubmit="return validateAddressForm('shipping');">
+                <div class="fieldset" style="display:none">
+                    <input name="form_key" type="hidden" value="wmsK78xYWEMJThlz"> <input type="hidden" name="success_url" value="">
+                    <input type="hidden" name="error_url" value="">
+                </div>
+
+                <input type="hidden" id="contactname" name="contactname" value="shipping">
+
+                <div class="form-group">
+                    <label for="firstname" class="control-label col-sm-3">Имя<span class="red"> *</span></label>
+                    <div class="col-sm-9">
+                        <input class="form-control required" maxlength="30" type="text" id="firstname" name="firstname" value="M " title="Укажите имя">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname" class="control-label col-sm-3">Фамилия<span class="red"> *</span></label>
+                    <div class="col-sm-9">
+                        <input class="form-control required" maxlength="30" type="text" id="lastname" name="lastname" value="Z " title="Укажите фамилию">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label col-xs-12 col-sm-3" for="telephone">Основной телефон<span class="red"> *</span></label>
+                    <div class="col-xs-8 account-tel-title">
+                        <input class="form-control text telephone required" type="text" id="telephone" name="telephone" value="">
+                    </div>
+                    <div class="col-xs-1 pl-0 tel-add-show-wrap">
+                        <a class="btn btn-default btn-block btn-form tel-add-show" title="Добавить дополнительный телефон"><i class="isoi isoi-plus"></i></a>
+                        <script>
+                            $(function() {
+                                $('.tel-add-show').on('click', function() {
+                                    $('.tel-add-show-wrap').addClass('hidden');
+                                    $('.tel-add').collapse('show');
+                                    $('.account-tel-title').addClass('col-xs-12, col-sm-9').removeClass('col-xs-8');
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div class="form-group collapse tel-add">
+                    <label class="control-label col-sm-3" for="fax">Дополнительный телефон</label>
+                    <div class="col-sm-9">
+                        <input class="form-control text telephone" type="text" id="fax" name="fax" value="">
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="form-group">
+                    <label for="postcode" class="control-label col-sm-3">Индекс</label>
+                    <div class="col-sm-9">
+                        <input class="form-control text digits" maxlength="6" type="text" name="postcode" id="postcode" value="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="city" class="control-label col-sm-3 required">Город<span class="red"> *</span></label>
+                    <div class="col-sm-9">
+                        <input class="form-control text required" type="text" name="city" value="" id="city">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="street" class="control-label col-sm-3 required">Улица<span class="red"> *</span></label>
+                    <div class="col-sm-9">
+                        <input class="form-control text required" type="text" name="street[]" id="street">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="housenumber" class="control-label col-sm-3 required">Дом<span class="red"> *</span></label>
+                    <div class="col-sm-9">
+                        <input class="form-control text required" type="text" name="housenumber" id="housenumber">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="buildingnumber">Корпус</label>
+                    <div class="col-sm-9">
+                        <input class="form-control  text" type="text" name="buildingnumber" id="buildingnumber">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="apartamentsnumber">Квартира</label>
+                    <div class="col-sm-9">
+                        <input class="form-control text" type="text" name="apartamentsnumber" id="apartamentsnumber" >
+                    </div>
+                </div>
+
+
+                <div class="form_option part_1 form-group">
+                    <label class="control-label col-sm-3" for="comment">Комментарий</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control  textarea" name="comment" id="comment"></textarea>
+                    </div>
+                </div>
+
+                <input type="hidden" name="default_shipping" value="1">
+                <div class="form-group">
+                    <div class="col-sm-6 notice-block mb-10">
+                        <span class="red">*</span> - поля обязательные для заполнения
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <button class="btn btn-success btn-icon" type="submit" title="Сохранить">
+                            <span class="isoi isoi-mark-done"></span>
+                            <span class="btn-icon__text">Сохранить</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+    </div>
+</div>

@@ -1,0 +1,212 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-2 hidden-xs hidden-sm">
+            <ul class="account-nav">
+                <li class="account-nav__item">
+                    <a class="account-nav__link" href="https://www.isolux.ru/customer/account/">Панель управления</a>
+                </li>
+                <li class="account-nav__item">
+                    <a class="account-nav__link" href="https://www.isolux.ru/customer/account/edit/">Данные учётной записи</a>
+                </li>
+                <li class="account-nav__item active">
+                    <a class="account-nav__link" href="https://www.isolux.ru/customer/address/">Мой профиль</a>
+                </li>
+                <li class="account-nav__item">
+                    <a class="account-nav__link" href="https://www.isolux.ru/sales/order/history/">Мои заказы</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-md-10">
+            <h1 class="inner-header-main account-head">Добавить новый профиль</h1>
+
+            <form class="form-horizontal account-form" action="https://www.isolux.ru/customer/address/formPost/type/shipping/" method="post" id="form-validate" onsubmit="return validateAddressForm('billing');">
+                <div class="fieldset" style="display:none">
+                    <input name="form_key" type="hidden" value="wmsK78xYWEMJThlz"> <input type="hidden" name="success_url" value="">
+                    <input type="hidden" name="error_url" value="">
+                </div>
+
+
+                <div class="form_body">
+
+                    <input type="hidden" id="contactname" name="contactname" value="billing">
+
+                    <div class="form-group">
+                        <span class="col-sm-3">Выбор профиля:</span>
+                        <div class="col-sm-9">
+                            <label class="custom-control custom-radio">
+								<input class="custom-control__input" type="radio" name="profiletype" checked title="Физическое лицо" value="1">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Физическое лицо</span>
+                            </label>
+                            <label class="custom-control custom-radio">
+                                <input class="custom-control__input" type="radio" name="profiletype" title="Юридическое лицо" value="5">
+                                <span class="custom-control__indicator"></span>
+                                <span class="custom-control__description">Юридическое лицо</span>
+                            </label>
+                        </div>
+                        <script type="text/javascript">
+                            $(window).load(function() {
+                                var _profileType = 'none';
+                                $("input[name='profiletype']").change(function() {
+                                    showProfileType($(this));
+                                });
+
+                                function showProfileType($this) {
+                                    $("input[name='profiletype']").removeAttr('checked');
+                                    if ($this.val() == "1") {
+                                        _profileType = 'physic';
+                                        $("#juridic").addClass('hidden');
+                                    } else {
+                                        _profileType = 'juridic';
+                                        $("#juridic").removeClass('hidden');
+                                    }
+                                    console.log($this);
+                                    $this.attr('checked', true);
+                                }
+                            });
+                        </script>
+
+                    </div>
+
+
+                    <div class="form-group name-firstname">
+                        <label for="firstname" class="control-label col-sm-3">Имя<span class="red"> *</span></label>
+                        <div class="col-sm-9">
+                            <input class="form-control required" maxlength="30" type="text" id="firstname" name="firstname" value="M " title="Укажите имя">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname" class="control-label col-sm-3">Фамилия<span class="red"> *</span></label>
+                        <div class="col-sm-9">
+                            <input class="form-control required" maxlength="30" type="text" id="lastname" name="lastname" value="Z " title="Укажите фамилию">
+                        </div>
+                    </div>
+
+                    <div id="juridic" class="account-inner hidden">
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="company">Название организации <span class="red">*</span></label>
+                            <div class="col-sm-9">
+                                <input class="form-control text required" type="text" id="company" name="company" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="ownership">Форма собственности<span class="red"> *</span></label>
+                            <div class="col-sm-9">
+                                <input class="form-control text required" type="text" name="ownership" id="ownership" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="physicaladdress">Фактический адрес<span class="red"> *</span></label>
+                            <div class="col-sm-9">
+                                <input class="form-control text required" type="text" name="physicaladdress" id="physicaladdress" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="legaladdress">Юридический адрес<span class="red"> *</span></label>
+                            <div class="col-sm-9">
+                                <input class="form-control text required" id="legaladdress" type="text" name="legaladdress" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="bic">БИК<span class="red"> *</span></label>
+                            <div class="col-sm-9">
+                                <input class="form-control text required" type="text" name="bic" id="bic" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="coraccount">Корреспонденсткий счет<span class="red"> *</span></label>
+                            <div class="col-sm-9">
+                                <input class="form-control text required" id="coraccount" type="text" name="coraccount" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="bankname">Наименование банка</label>
+                            <div class="col-sm-9">
+                                <input class="form-control text" type="text" id="bankname" name="bankname" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="curaccount">Расчетный счет</label>
+                            <div class="col-sm-9">
+                                <input class="form-control text" type="text" id="curaccount" name="curaccount" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="inn">ИНН<span class="red"> *</span></label>
+                            <div class="col-sm-9">
+                                <input class="form-control text required" type="text" id="inn" name="inn" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="kpp">КПП</label>
+                            <div class="col-sm-9">
+                                <input class="form-control text" type="text" id="kpp" name="kpp" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="generalmanager">Генеральный директор</label>
+                            <div class="col-sm-9">
+                                <input class="form-control text" type="text" id="generalmanager" name="generalmanager" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="okpo">ОКПО</label>
+                            <div class="col-sm-9">
+                                <input class="form-control text" type="text" id="okpo" name="okpo" value="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-3" for="telephone">Основной телефон<span class="red"> *</span></label>
+                        <div class="col-xs-8 account-tel-title">
+                            <input class="form-control text telephone required" type="text" id="telephone" name="telephone" value="">
+                        </div>
+                        <div class="col-xs-1 pl-0 tel-add-show-wrap">
+                            <a class="btn btn-default btn-block btn-form tel-add-show" title="Добавить дополнительный телефон"><i class="isoi isoi-plus"></i></a>
+                            <script>
+                                $(function() {
+                                    $('.tel-add-show').on('click', function() {
+                                        $('.tel-add-show-wrap').addClass('hidden');
+                                        $('.tel-add').collapse('show');
+                                        $('.account-tel-title').addClass('col-xs-12, col-sm-9').removeClass('col-xs-8');
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="form-group collapse tel-add">
+                        <label class="control-label col-sm-3" for="fax">Дополнительный телефон</label>
+                        <div class="col-sm-9">
+                            <input class="form-control text telephone" type="text" id="fax" name="fax" value="">
+                        </div>
+                    </div>
+                    <input type="hidden" name="default_billing" value="1">
+                </div>
+
+                <div class="form-group">
+                    <div class="col-xs-12">
+        				<label class="custom-control custom-checkbox">
+                            <input class="custom-control__input" type="checkbox" id="primary_billing" name="default_billing" value="1" title="Использовать в качестве моего профиля плательщика по умолчанию.">
+                            <span class="custom-control__indicator"></span>
+                            <span class="custom-control__description">Использовать в качестве моего профиля плательщика по умолчанию.</span>
+        				</label>
+                    </div>
+				</div>
+
+                <div class="form-group">
+                    <div class="col-sm-6 notice-block mb-10">
+                        <span class="red">*</span> - поля обязательные для заполнения
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <button class="btn btn-success btn-icon" type="submit" title="Сохранить">
+                            <span class="isoi isoi-mark-done"></span>
+                            <span class="btn-icon__text">Сохранить</span>
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>

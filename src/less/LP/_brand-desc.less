@@ -1,0 +1,96 @@
+@import url(../variables.less);
+
+.brand {
+    &-description {
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        @media (min-width: @screen-sm-min) {
+            font-size: 16px;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 30px;
+        }
+
+        .knauf-promo-2017 .page-main > &-wrap {
+            margin-bottom: 30px;
+        }
+
+        .h1-brand {
+            margin-top: 20px;
+            @media (min-width: @screen-sm-min) {
+                margin-top: 0;
+            }
+        }
+
+        &__collapse {
+            position: relative;
+            display: block;
+            min-height: 3rem;
+            margin-bottom: 10px;
+            overflow: hidden;
+
+            &.collapse::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 1.5rem;
+                width: 100%;
+                height: 60px;
+                background: linear-gradient(to top, #777, #ccc 50%, #ddd 75%, #f4fbfe 100%);
+                filter: blur(6px);
+                opacity: 0.5;
+                z-index: 100;
+                border-radius: 45%;
+            }
+            &.collapse.in::after,
+            &.collapsing::after {
+                display: none;
+            }
+        }
+    }
+
+    &-logo {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #D6EFFB;
+        padding: 17px;
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 390px;
+        @media (min-width: @screen-sm-min) {
+            width: 24%;
+            flex-basis: 24%;
+            margin-right: 30px;
+            padding: 37px;
+            max-width: none;
+        }
+    }
+
+    &-text {
+        flex-grow: 1;
+        width: 100%;
+        @media (min-width: @screen-sm-min) {
+            flex-basis: 0;
+            width: 76%;
+        }
+    }
+
+    &-container {
+        margin-bottom: 40px;
+        @media (min-width: @screen-lg-min) {
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.brand-desc {
+    &-container {
+        margin-bottom: 30px;
+    }
+}

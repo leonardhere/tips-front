@@ -1,0 +1,20 @@
+@import url(../variables.less);
+@import url(../mixins.less);
+
+.captcha {
+    @media (max-width: @screen-xs-max) {
+        & > div {
+            width: 270px!important;
+            transform: scale(0.8)!important;
+        }
+
+    }
+    &-wrap {
+        display: flex;
+        margin-bottom: 0!important;
+        margin-top: 10px;
+        .checkout-tabs & {
+            margin-bottom: 15px!important;
+        }
+    }
+}

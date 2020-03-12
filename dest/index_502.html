@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Интернет-магазин стройматериалов isolux.ru - купить строительные материалы с доставкой в Москве</title>
+    <link rel="stylesheet" href="skin/frontend/adaptive/default/css/bootstrap.css"/>
+    <link rel="stylesheet" href="skin/frontend/adaptive/default/css/main_502.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.isolux.ru/favicon.ico"/>
+<!--[if lte IE 8]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="errornf-body">
+    <div class="container errornf">
+    <div class="row errornf-head">
+        <div class="col-xs-6">
+            <a class="d-inline-block" href="https://www.isolux.ru/" title="Интернет магазин строительных материалов ИЗОЛЮКС">
+                <img class="img-responsive errornf-logo" src="/skin/frontend/adaptive/default/images/bg/n_logo.png" alt="Стройматериалы. Интернет магазин стройматериалов АО ИЗОЛЮКС в Москве">
+            </a>
+        </div>
+        <div class="col-xs-6 text-right">
+            <a class="errornf-tel" href="tel:+74952740150">+7(495) 274-01-50</a>
+        </div>
+    </div>
+    <img class="center-block errornf-img" src="\skin\frontend\adaptive\default\images\notfound.svg" alt="404">
+    <div class="errornf-h2">Ошибка 502</div>
+    <div class="errornf-h1 h1">В настоящее время сайт недоступен, <br> приносим свои извинения</div>
+    <p class="errornf-msg">Вы можете уточнить интересующую вас информацию по телефону <a class="errornf-tel" href="tel:+74952740150">+7(495) 274-01-50</a></p>
+    <!-- <div class="errornf-countdown"><span class="errornf-countdown-num" id="redirect-countodwn">10</span></div>
+    <div class="row errornf-options">
+        <div class="col-xs-12"><a href="" class="btn btn-default btn-lg btn-block">Перейти сейчас</a></div>
+    </div> -->
+</div>
+<script>
+    var countDownDate = new Date().getTime() + 11000;
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("redirect-countodwn").innerHTML = seconds;
+        if (distance <= 0) {
+            clearInterval(x);
+            document.getElementById("redirect-countodwn").innerHTML = "0";
+            // location.href = 'https://isolux.ru';
+        }
+    }, 1000);
+</script>
+
+</body>
+
+</html>

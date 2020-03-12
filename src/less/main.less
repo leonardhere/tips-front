@@ -1,0 +1,180 @@
+@import url(variables.less);
+html
+{
+    font-size: 16px;
+
+    position: relative;
+
+    height: 100%;
+    @media (min-width: @screen-sm-min)
+    {
+        font-size: 16px;
+    }
+    //asdasd
+}
+
+body
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    min-width: 320px;
+    height: 100%;
+    min-height: 100vh;
+
+    justify-content: space-between;
+    @media (max-width: @screen-sm-max)
+    {
+        padding-top: 52px;
+    }
+}
+
+.page-main
+{
+    min-height: 350px;
+    margin-bottom: 35px;
+    padding-top: 20px;
+    position: relative;
+
+    flex: 1 0 auto;
+    position: relative;
+    @media (min-width: @screen-md-min)
+    {
+        margin-bottom: 50px;
+    }
+
+    .breadcrumb
+    {
+//         margin-top: -10px;
+//         margin-bottom: 10px;
+        margin-top: -10px;
+        margin-bottom: 0;
+        margin-left: -10px;
+        margin-right: -10px;
+        padding: 0 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #D6EFFB;
+
+        @media (min-width: @screen-sm-min) {
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 10px;
+            padding: 0;
+            border-bottom: none;
+        }
+    }
+
+    .catalog-product-view  &
+    {
+        background-color: #f4fbfe;
+        @media (min-width: @screen-sm-min) {
+            background-color: #fff;
+        }
+    }
+}
+
+.catalog-product-view .breadcrumb {
+    > li:last-child {
+        display: none;
+    }
+}
+
+.category-discounts
+{
+    background-color: #fff;
+}
+
+.container
+{
+    @media (min-width: (@screen-sm-min + 20)) and (max-width: @screen-sm-max)
+    {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    @media (min-width: (@screen-md-min + 20)) and (max-width: @screen-md-max)
+    {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    @media (min-width: (@screen-lg-min + 20))
+    {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    &-xs {
+      @media (max-width: @screen-xs-max) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+}
+@import url(variables.less);
+@import url(mixins.less);
+@import url(_typography.less);
+@import url(slick.less);
+@import url(slick-theme.less);
+@import url(_components.less);
+@import url(_font-iso.less);
+@import url(_feedback-widget.less);
+
+//noUiSlider
+@import url(noui-slider/nouislider.less);
+
+@import url(_site-controls.less);
+@import url(_navbar.less);
+@import url(_navbar-products.less);
+// @import url(_navbar-products.less);
+@import url(_nav-steps.less);
+
+//main page
+@import url(main/_sliders.less);
+@import url(main/_products-catalog.less);
+@import url(main/_promo-content.less);
+@import url(main/_about-us-tabs.less);
+@import url(main/_articles-carousel.less);
+
+//card product
+@import url(card_product/_product-summary.less);
+@import url(card_product/_product-complex.less);
+@import url(card_product/_product-simple.less);
+@import url(card_product/_product-collection.less);
+@import url(card_product/_product-tabs.less);
+@import url(card_product/_product-additional-tabs.less);
+@import url(card_product/_product-card.less);
+@import url(card_product/_product-mods.less);
+@import url(card_product/_product-review.less);
+
+//catalog
+@import url(catalog/_catalog-left-side-new.less);
+@import url(catalog/_banner-problem.less);
+@import url(catalog/_result.less);
+
+//cart
+@import url(cart/_cart.less);
+
+//checkout
+@import url(checkout/_checkout.less);
+
+//static
+@import url(static/_brands.less);
+// @import url(static/_contacts.less);
+// @import url(static/_opt.less);
+// @import url(static/_delivery.less);
+@import url(static/_payments.less);
+// @import url(calc/_calc.less);
+@import url(static/_telephony.less);
+@import url(static/_404.less);
+
+//account
+@import url(account/_account.less);
+
+//articles
+@import url(articles/_articles.less);
+@import url(main-lp.less);
+// @import url(main-knauf18.less);
+
+
+@import url(_subscribe.less);
+@import url(_page-footer.less);

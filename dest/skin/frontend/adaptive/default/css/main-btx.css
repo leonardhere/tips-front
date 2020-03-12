@@ -1,0 +1,75 @@
+.b24-button {
+  position: fixed;
+  right: 55px;
+  bottom: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  z-index: 3;
+  background-color: #2eceff;
+  -webkit-box-shadow: 0 0 0 7px rgba(46, 206, 255, 0.2);
+  box-shadow: 0 0 0 7px rgba(46, 206, 255, 0.2);
+}
+.b24-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-animation: widgetPulse infinite 1.5s;
+  animation: widgetPulse infinite 1.5s;
+  border: 1px solid #2eceff;
+  border-radius: 50%;
+}
+.b24-button .b24-crm-button-icon {
+  width: 24px;
+  height: 24px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.b24-button.btn-success {
+  background-color: #ffe600;
+  font-size: 20px;
+  line-height: 38px;
+  -webkit-box-shadow: 0 0 0 7px rgba(255, 230, 0, 0.2);
+  box-shadow: 0 0 0 7px rgba(255, 230, 0, 0.2);
+}
+.b24-button.btn-success::after {
+  border-color: #ffe600;
+}
+@-webkit-keyframes widgetPulse {
+  50% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2, 2);
+    transform: scale(2, 2);
+    opacity: 0;
+  }
+}
+@keyframes widgetPulse {
+  50% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2, 2);
+    transform: scale(2, 2);
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=maps/main-btx.css.map */

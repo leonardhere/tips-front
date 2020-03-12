@@ -1,0 +1,146 @@
+@import url(../variables.less);
+.cms-no-route {
+    .page-main {
+        > .container {
+            width: auto;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+.errornf {
+    &-body {
+        padding-top: 15px;
+
+        @media (min-width: @screen-sm-min) {
+            padding-top: 40px;
+        }
+    }
+    &-h1 {
+        font-size: 30px;
+        line-height: 1.16;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 14px;
+
+        @media (min-width: @screen-sm-min) {
+            font-size: 60px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        &-down {
+            line-height: 1;
+        }
+    }
+
+    &-h2 {
+        font-size: 24px;
+        line-height: 1.175;
+        text-align: center;
+        color: #6C8A9B;
+
+        @media (min-width: @screen-sm-min) {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &-msg {
+        color: #6C8A9B;
+        line-height: 1.16;
+        margin-bottom: 30px;
+        text-align: center;
+        @media (min-width: @screen-sm-min) {
+            font-size: 25px;
+            margin-bottom: 60px;
+        }
+    }
+
+    &-img {
+        width: 80px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        @media (min-width: @screen-sm-min) {
+            width: auto;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &-options {
+        > div {
+            margin-bottom: 20px;
+        }
+        &-container {
+            border-top: 1px solid #D6EFFB;
+            padding-top: 30px;
+
+            @media (min-width: @screen-sm-min) {
+                border-top-width: 2px;
+                padding-top: 60px;
+            }
+        }
+
+        .btn {
+            height: 60px;
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.1875;
+            text-transform: uppercase;
+            max-width: 280px;
+            margin-left: auto;
+            margin-right: auto;
+
+            &--multi {
+                padding: 10px 20px;
+            }
+        }
+    }
+
+    &-tel {
+        font-size: 16px;
+        line-height: 1.1875;
+        font-weight: bold;
+        position: relative;
+        top: 1px;
+        white-space: nowrap;
+
+        @media (min-width: @screen-sm-min) {
+            font-size: 28px;
+        }
+    }
+
+    &-logo {
+        max-width: 100px;
+
+        @media (min-width: @screen-sm-min) {
+            max-width: 200px;
+        }
+    }
+
+    &-head {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    &-countdown {
+        display: block;
+        width: 47px;
+        height: 47px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        background: url('../images/bg/countdown.svg') center center no-repeat;
+
+        &-num {
+            display: inline-block;
+            width: 100%;
+            font-size: 18px;
+            line-height: 1.16;
+            padding: 15px;
+            text-align: center;
+        }
+    }
+}

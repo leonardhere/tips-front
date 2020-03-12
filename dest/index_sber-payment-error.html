@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Сбербанк</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
+    <link rel="stylesheet" href="skin/frontend/adaptive/default/css/main_sber-payment.css">
+
+    <script src="/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.url.js" type="text/javascript"></script>
+    <script src="/js/jquery.timers-1.2.js" type="text/javascript"></script>
+    <script src="/js/error_page.js" type="text/javascript"></script>
+    <script type="text/javascript">
+  var lang = "ru";
+
+</script>
+<!--[if lte IE 8]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+    <body>
+        <div class="container">
+    <div class="row logo-container">
+        <div class="col-xs-6">
+            <img class="logo-iso" src="/skin/frontend/adaptive/default/images/sber_pay/isolux_logo.svg" alt="Стройматериалы. Интернет магазин стройматериалов АО ИЗОЛЮКС в Москве">
+        </div>
+        <div class="col-xs-6 text-right">
+            <img class="logo-bank" src="/skin/frontend/adaptive/default/images/sber_pay/sber-logo-main.png" alt="Сбербанк">
+        </div>
+    </div>
+    <div class="center-container">
+        <div class="row payment-row">
+            <img class="payment-status-img" src="/skin/frontend/adaptive/default/images/sber_pay/smile-error.svg">
+            <div class="payment-status">
+                Ваш платёж <br> <strong>не был выполнен</strong>
+            </div>
+            <div class="clearfix payment-status-row">
+                <div class="col-xs-6 payment-status-title">Номер заказа</div>
+                <div class="col-xs-6 payment-status-value">СИ12146454</div>
+            </div>
+            <div class="clearfix payment-status-row">
+                <div class="col-xs-6 payment-status-title">Сумма</div>
+                <div class="col-xs-6 payment-status-value">12 354,00 ₽</div>
+            </div>
+            <a class="btn btn-error" href="https://www.isolux.ru/s" type="button" name="button">Повторить платёж</a>
+            <form name="errorForm" action="/" method="post" id="errorForm">
+                <input type="hidden" id="language" value="ru">
+                <div id="errorBlock"></div>
+            </form>
+        </div>
+        <div class="system-logos">
+            <img class="system-logos-img" src="images/payment-system-logos.png">
+        </div>
+        <div class="security-text">
+            Настоящий сайт поддерживает 256-битное шифрование. Конфиденциальность сообщаемой персональной информации обеспечивается ПАО "Сбербанк России". Введенная информация не будет предоставлена третьим лицам за исключением случаев, предусмотренных законодательством
+            РФ. Проведение платежей по банковским картам осуществляется в строгом соответствии с требованиями платежных систем Visa Int. и MasterCard Europe Sprl
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

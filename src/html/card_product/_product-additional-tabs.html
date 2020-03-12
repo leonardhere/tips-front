@@ -1,0 +1,37 @@
+<div class="product-tabs product-tabs--add">
+  <div class="container-fluid nav-tabs-fluid p-0 hidden-xs">
+    <ul class="nav nav-tabs container nav-justified-md" role="tablist">
+      <li class="nav-item active" role="presentation"><a href="#product-recommend" aria-controls="home" role="tab" data-toggle="tab">РЕКОМЕНДУЕМ ТАКЖЕ</a></li>
+      <li class="nav-item" role="presentation"><a href="#product-similars" aria-controls="profile" role="tab" data-toggle="tab">ПОХОЖИЕ ТОВАРЫ</a></li>
+      <li class="nav-item" role="presentation"><a href="#product-last-viewed" aria-controls="messages" role="tab" data-toggle="tab">НЕДАВНО ПРОСМОТРЕННЫЕ</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="product-recommend">
+        <span class="tab-pane-header visible-xs">РЕКОМЕНДУЕМ ТАКЖЕ</span>
+        <div class="result-search grid tab-pane-products">
+            @@for (var i = 0; i < 12; i++) {
+                @@include('_product-item.html')
+            }
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="product-similars">
+        <span class="tab-pane-header visible-xs">ПОХОЖИЕ ТОВАРЫ</span>
+        <div class="result-search grid tab-pane-products">
+            @@for (var i = 0; i < 10; i++) {
+                @@include('_product-item.html')
+            }
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="product-last-viewed">
+        <span class="tab-pane-header visible-xs">НЕДАВНО ПРОСМОТРЕННЫЕ</span>
+        <div class="result-search grid tab-pane-products">
+            @@for (var i = 0; i < 6; i++) {
+                @@include('_product-item.html')
+            }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

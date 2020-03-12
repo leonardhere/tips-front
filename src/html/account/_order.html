@@ -1,0 +1,196 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-3 col-lg-2 aside-left">
+            <ul class="account-nav">
+                <li class="account-nav__item">
+                    <a class="account-nav__link" href="https://www.isolux.ru/customer/account/">Панель управления</a>
+                </li>
+                <li class="account-nav__item">
+                    <a class="account-nav__link" href="https://www.isolux.ru/customer/account/edit/">Данные учётной записи</a>
+                </li>
+                <li class="account-nav__item">
+                    <a class="account-nav__link" href="https://www.isolux.ru/customer/address/">Мой профиль</a>
+                </li>
+                <li class="account-nav__item active">
+                    <a class="account-nav__link" href="https://www.isolux.ru/sales/order/history/">Мои заказы</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-md-9 col-lg-10 aside-content">
+            <div class="account-wrap">
+                <h1 class="inner-header-main account-head">Мои заказы</h1>
+                <div class="result-toolbar clearfix">
+                    <div class="result-sort pull-left">
+                        <span class="result-sort-title">Всего заказов:</span>
+                        <strong class="green">3 шт.</strong>
+                    </div>
+                    <div class="result-sort pull-right hidden-xs">
+                        <span class="result-sort-title">Показывать по:</span>
+                        <div class="dropdown d-inline-block">
+                            <span class="result-sort-current" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="result-sort-text">10</span><span class="iso-caret"></span></span>
+                            <ul class="result-sort-list dropdown-menu dropdown-popover">
+                                <li><a href="http://localhost:8080/sales/order/history/?limit=10" selected="true">10</a></li>
+                                <li><a href="http://localhost:8080/sales/order/history/?limit=20">20</a></li>
+                                <li><a href="http://localhost:8080/sales/order/history/?limit=50">50</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-table product-table--order">
+                    <div class="product-table__row product-table__row--header hidden-xs hidden-sm clearfix">
+                        <div class="product-table__col col-md-2">
+                            Заказ №
+                        </div>
+                        <div class="product-table__col col-md-2">
+                            Дата
+                        </div>
+                        <div class="product-table__col col-md-2">
+                            Доставка на имя
+                        </div>
+                        <div class="product-table__col col-md-2">
+                            Сумма заказа
+                        </div>
+                        <div class="product-table__col col-md-2">
+                            Статус заказа
+                        </div>
+                        <div class="product-table__col col-md-2">
+                        </div>
+                    </div>
+                    <div class="product-table__row clearfix">
+                        <div class="product-table__col col-md-2">
+                            <div class="row">
+                                <div class="order-cell order-cell__title hidden-md hidden-lg">Номер заказа:</div>
+                                <div class="order-cell order-cell__value">100089604</div>
+                            </div>
+                        </div>
+                        <div class="product-table__col col-md-2">
+                            <div class="row">
+                                <div class="order-cell order-cell__title hidden-md hidden-lg">Дата заказа:</div>
+                                <div class="order-cell order-cell__value">22.11.16</div>
+                            </div>
+                        </div>
+                        <div class="product-table__col col-md-2">
+                            <div class="row">
+                                <div class="order-cell order-cell__title hidden-md hidden-lg">Доставка на имя:</div>
+                                <div class="order-cell order-cell__value">Иванов Иван</div>
+                            </div>
+                        </div>
+                        <div class="product-table__col col-md-2 hidden-xs hidden-sm active">
+                            <span class="product-table-price--cur">
+                                <span class="product-table-price-num">741.07</span> <span class="product-table-price-ico">₽</span>
+                            </span>
+                        </div>
+                        <div class="product-table__col col-md-2">
+                            <div class="row">
+                                <div class="order-cell order-cell__title hidden-md hidden-lg">Статус заказа:</div>
+                                <div class="order-cell order-cell__value">Обрабатывается</div>
+                            </div>
+                        </div>
+                        <div class="product-table__col col-md-2">
+                            <div class="product-table-buy-total clearfix">
+                                <span class="product-table-buy-title order-cell__title hidden-md hidden-lg">Сумма заказа:</span>
+                                <span class="product-table-buy-num order-cell__value hidden-md hidden-lg">741,07</span>
+                                <span class="product-table-buy-ico order-cell__value hidden-md hidden-lg">&nbsp;₽</span>
+                                <div class="pull-right">
+                                    <a class="btn btn-primary btn-icon btn-sm" href="#">
+                                        <span class="isoi isoi-arrow-right visible-lg"></span>
+                                        <span class="btn-icon__text">ПОДРОБНЕЕ</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-table__row clearfix">
+                        <div class="product-table__col col-md-2">
+                            <div class="row">
+                                <div class="order-cell order-cell__title hidden-md hidden-lg">Номер заказа:</div>
+                                <div class="order-cell order-cell__value">100089604</div>
+                            </div>
+                        </div>
+                        <div class="product-table__col col-md-2">
+                            <div class="row">
+                                <div class="order-cell order-cell__title hidden-md hidden-lg">Дата заказа:</div>
+                                <div class="order-cell order-cell__value">22.11.16</div>
+                            </div>
+                        </div>
+                        <div class="product-table__col col-md-2">
+                            <div class="row">
+                                <div class="order-cell order-cell__title hidden-md hidden-lg">Доставка на имя:</div>
+                                <div class="order-cell order-cell__value">Иванов Иван</div>
+                            </div>
+                        </div>
+                        <div class="product-table__col col-md-2 hidden-xs hidden-sm active">
+                            <span class="product-table-price--cur">
+                                <span class="product-table-price-num">741.07</span> <span class="product-table-price-ico">₽</span>
+                            </span>
+                        </div>
+                        <div class="product-table__col col-md-2">
+                            <div class="row">
+                                <div class="order-cell order-cell__title hidden-md hidden-lg">Статус заказа:</div>
+                                <div class="order-cell order-cell__value"><span class="red">Отменён</span></div>
+                            </div>
+                        </div>
+                        <div class="product-table__col col-md-2">
+                            <div class="product-table-buy-total clearfix">
+                                <span class="product-table-buy-title order-cell__title hidden-md hidden-lg">Сумма заказа:</span>
+                                <span class="product-table-buy-num order-cell__value hidden-md hidden-lg">741,07</span>
+                                <span class="product-table-buy-ico order-cell__value hidden-md hidden-lg">&nbsp;₽</span>
+                                <div class="pull-right">
+                                    <a class="btn btn-primary btn-icon btn-sm" href="#">
+                                        <span class="isoi isoi-arrow-right visible-lg"></span>
+                                        <span class="btn-icon__text">ПОДРОБНЕЕ</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-table__row clearfix">
+                        <div class="product-table__col col-md-2">
+                            <div class="row">
+                                <div class="order-cell order-cell__title hidden-md hidden-lg">Номер заказа:</div>
+                                <div class="order-cell order-cell__value">100089604</div>
+                            </div>
+                        </div>
+                        <div class="product-table__col col-md-2">
+                            <div class="row">
+                                <div class="order-cell order-cell__title hidden-md hidden-lg">Дата заказа:</div>
+                                <div class="order-cell order-cell__value">22.11.16</div>
+                            </div>
+                        </div>
+                        <div class="product-table__col col-md-2">
+                            <div class="row">
+                                <div class="order-cell order-cell__title hidden-md hidden-lg">Доставка на имя:</div>
+                                <div class="order-cell order-cell__value">Иванов Иван</div>
+                            </div>
+                        </div>
+                        <div class="product-table__col col-md-2 hidden-xs hidden-sm active">
+                            <span class="product-table-price--cur">
+                                <span class="product-table-price-num">741.07</span> <span class="product-table-price-ico">₽</span>
+                            </span>
+                        </div>
+                        <div class="product-table__col col-md-2">
+                            <div class="row">
+                                <div class="order-cell order-cell__title hidden-md hidden-lg">Статус заказа:</div>
+                                <div class="order-cell order-cell__value"><span class="green">Завершён</span></div>
+                            </div>
+                        </div>
+                        <div class="product-table__col col-md-2">
+                            <div class="product-table-buy-total clearfix">
+                                <span class="product-table-buy-title order-cell__title hidden-md hidden-lg">Сумма заказа:</span>
+                                <span class="product-table-buy-num order-cell__value hidden-md hidden-lg">741,07</span>
+                                <span class="product-table-buy-ico order-cell__value hidden-md hidden-lg">&nbsp;₽</span>
+                                <div class="pull-right">
+                                    <a class="btn btn-primary btn-icon btn-sm" href="#">
+                                        <span class="isoi isoi-arrow-right visible-lg"></span>
+                                        <span class="btn-icon__text">ПОДРОБНЕЕ</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

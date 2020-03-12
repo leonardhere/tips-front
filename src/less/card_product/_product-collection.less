@@ -1,0 +1,80 @@
+@import url(../variables.less);
+.product-collection
+{
+    @media (max-width: @screen-xs-max) {
+        margin-right: -20px;
+        margin-left: -20px;
+        width: auto!important;
+    }
+
+    &__header
+    {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px 10px 5px 10px;
+
+        background-color: #d6effb;
+    }
+
+    &__container {
+      width: 100%;
+    }
+
+    &-other
+    {
+        // margin-top: 15px;
+        &__item
+        {
+            margin-bottom: 15px;
+        }
+
+        .product-tabs
+        {
+            background-color: #fff;
+            .nav-tabs
+            {
+                width: 100%;
+
+                text-align: center;
+                > .nav-item
+                {
+                    width: 100%;
+                    margin-right: 0;
+                    > a
+                    {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+
+        &__img
+        {
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        &__title
+        {
+            max-width: 90%;
+        }
+
+        &__link
+        {
+            display: flex;
+
+            text-decoration: none;
+            &:hover,
+            &:focus,
+            &:hover:focus
+            {
+                text-decoration: none;
+
+                .product-collection-other__title
+                {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

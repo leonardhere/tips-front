@@ -1,0 +1,11 @@
+<section class="collapse-panel collapse-panel--req" data-target="#dy-req" data-toggle="collapse">
+    <a class="collapse-panel__header" data-toggle="collapse">
+        Товары которые Вам могут пригодиться
+        <span class="collapse-panel-toggler"></span>
+    </a>
+    <div class="collapse-panel__body collapse in" id="dy-req">
+        <div class="catalog-req">
+            @@for (var i = 0; i < 4; i++) { @@include( '../card_product/_product-item__req.html') }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,30 @@
+@import url(../variables.less);
+@media (min-width: @screen-md-min) {
+    .sidebar-menu__filters,
+    .navbar-iso-nav,
+    .nav-seek,
+    .wish-wrap,
+    .sidebar-menu__nav {
+        &::-webkit-scrollbar {
+            width: 0.7em;
+            border-radius: 3px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: rgba(204, 204, 204, 0.2);
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: rgba(204, 204, 204, 0.5);
+    /*       border-radius: 10px; */
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+          background-color: rgba(204, 204, 204, 0.8);
+        }
+
+        &::-webkit-scrollbar-thumb:focus {
+          background-color: rgba(204, 204, 204, 0.9);
+        }
+    }
+}

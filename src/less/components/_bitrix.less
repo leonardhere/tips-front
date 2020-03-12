@@ -1,0 +1,56 @@
+@import url(../variables.less);
+
+.b24-button {
+    position: fixed;
+    right: 55px;
+    bottom: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    z-index: 3;
+    background-color: #2eceff;
+    box-shadow: 0 0 0 7px rgba(46, 206, 255, 0.2);
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        animation: widgetPulse infinite 1.5s;
+        border: 1px solid #2eceff;
+        border-radius: 50%;
+    }
+
+    .b24-crm-button-icon {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+    }
+
+    &.btn-success {
+        background-color: #ffe600;
+        font-size: 20px;
+        line-height: 38px;
+        box-shadow: 0 0 0 7px rgba(255, 230, 0, 0.2);
+        &::after {
+            border-color: #ffe600;
+        }
+    }
+}
+
+@keyframes widgetPulse {
+    50% {
+        transform: scale(1,1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2,2);
+        opacity: 0;
+    }
+}

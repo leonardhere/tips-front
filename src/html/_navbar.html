@@ -1,0 +1,238 @@
+<nav class="navbar-iso navbar-iso--mobile">
+    <div class="navbar-iso-container container">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse-side" data-target="#bs-example-navbar-collapse-1" data-target-2=".side-collapse-container" aria-expanded="false" title="Показать меню">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <!-- <img class="img-responsive" src="https://www.isolux.ru/skin/frontend/newisolux/default/images/bg/n_logo.png?2012.07.27" alt="Стройматериалы. Интернет магазин стройматериалов АО ИЗОЛЮКС в Москве"> -->
+                <img class="img-responsive" src="img/n_logo.png" alt="Стройматериалы. Интернет магазин стройматериалов АО ИЗОЛЮКС в Москве">
+            </a>
+            <div class="mob-nav">
+                <a class="mob-item mob-item--search ml-0" title="Поиск товаров" data-target="#mobile-search-wrap">
+                    <span class="isoi isoi-search" title=""></span>
+                </a>
+                <a class="mob-item" id="mobile_cart_qty" href="https://www.isolux.ru/checkout/cart" title="Перейти в корзину">
+                    <span class="isoi isoi-cart"></span>
+                    <span class="product_num">99</span>
+                </a>
+                <span class="mob-item phone item" phone-call="false" title="Позвонить нам">
+            <span class="isoi isoi-phone_header"></span>
+                </span>
+                <div class="mob-item--search-wrap hidden" id="mobile-search-wrap">
+                    <form class="navbar-main__search container" action="catalogsearch/result/index/">
+                        <input type="search" name="q" class="form-control" placeholder="Более 50 000 товаров" autocomplete="off" />
+                        <span class="search-reset">
+                      <span class="isoi isoi-close"></span>
+                        </span>
+                    </form>
+                    <div class="search-result" id="search-result-mob">
+                      <div class="dropdown-menu dropdown-search">
+                        <div class="search-result__content">
+                          <div class="search-result__head">Подходящие товары:</div>
+                          <div class="search-result__body">
+                              <a class="search-result__link" href="/gipsokartonnyy-list-knauf-restavratsionnyy-2500kh1200kh6-5-mm.html">
+                                Гипсокартонный лист (ГКЛ)→Гипсокартонный лист <span class="search-result__mark">Kna</span>uf реставрационный 2500х1200х6.5 мм
+                              </a>
+                              <a class="search-result__link search-result__link--promo" href="/gipsokartonnyy-list-knauf-restavratsionnyy-2500kh1200kh6-5-mm.html">
+                                Гипсокартонный лист (ГКЛ)→Гипсокартонный лист <span class="search-result__mark">Kna</span>uf реставрационный 2500х1200х6.5 мм
+                              </a>
+                              <a class="search-result__link" href="/gipsokartonnyy-list-knauf-restavratsionnyy-2500kh1200kh6-5-mm.html">
+                                Гипсокартонный лист (ГКЛ)→Гипсокартонный лист <span class="search-result__mark">Kna</span>uf реставрационный 2500х1200х6.5 мм
+                              </a>
+                          </div>
+                        </div>
+
+                        <div class="search-result__content">
+                          <div class="search-result__head">Производители:</div>
+                          <div class="search-result__body">
+                              <a class="search-result__link" href="/brands/knauf-insulation.html">
+                                <span class="search-result__mark">Kna</span>uf Insulation
+                              </a>
+                              <a class="search-result__link" href="/brands/knauf-insulation.html">
+                                <span class="search-result__mark">Kna</span>uf Insulation
+                              </a>
+                              <a class="search-result__link" href="/brands/knauf-insulation.html">
+                                <span class="search-result__mark">Kna</span>uf Insulation
+                              </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</nav>
+<div class="navbar-main">
+  <div class="container">
+    <div class="navbar-main__container">
+        <div class="navbar-main__item navbar-main__item--products pl-0" id="goods-dropdown">
+          <a class="btn btn-products dropdown-toggle" data-toggle="dropdown" href="#">
+              <span class="isoi isoi-burger2 icon"></span>
+              <span class="bag_info btn-products__text hidden-md">
+                  Каталог товаров
+              </span>
+          </a>
+          @@include('_navbar-goods.html')
+        </div>
+        <div class="navbar-main__item navbar-main__item--brand hidden">
+            <a class="d-inline-block" href="#">
+              <img src="skin/frontend/adaptive/default/images/bg/isolux_logo.svg" alt="Стройматериалы. Интернет магазин стройматериалов АО ИЗОЛЮКС в Москве">
+            </a>
+        </div>
+        <div class="navbar-main__item navbar-main__item--search">
+            <form class="navbar-main__search">
+                <input type="search" class="form-control" id="search" placeholder="Более 50 000 товаров" autocomplete="off" aria-label="Search">
+                <span class="search-reset" id="search-reset">
+                      <span class="isoi isoi-close" title=""></span>
+                </span>
+                <label class="btn btn-search" for="">
+                    <span class="isoi isoi-search" title=""></span>
+                    <input class="hidden" type="submit" title="Поиск" value="">
+                </label>
+            </form>
+            <div class="search-result" id="search-result">
+              <div class="dropdown-menu dropdown-search">
+                <div class="search-result__content">
+                    <div class="search-result__head">Подходящие товары:</div>
+                    <div class="search-result__body">
+                        <a class="search-result__link" href="/gipsokartonnyy-list-knauf-restavratsionnyy-2500kh1200kh6-5-mm.html">
+                            Гипсокартонный лист (ГКЛ)→Гипсокартонный лист <span class="search-result__mark">Kna</span>uf реставрационный 2500х1200х6.5 мм
+                        </a>
+                        <a class="search-result__link" href="/gipsokartonnyy-list-knauf-restavratsionnyy-2500kh1200kh6-5-mm.html">
+                            Гипсокартонный лист (ГКЛ)→Гипсокартонный лист <span class="search-result__mark">Kna</span>uf реставрационный 2500х1200х6.5 мм
+                        </a>
+                        <a class="search-result__link" href="/gipsokartonnyy-list-knauf-restavratsionnyy-2500kh1200kh6-5-mm.html">
+                            Гипсокартонный лист (ГКЛ)→Гипсокартонный лист <span class="search-result__mark">Kna</span>uf реставрационный 2500х1200х6.5 мм
+                        </a>
+                    </div>
+                </div>
+
+                <div class="search-result__content">
+                  <div class="search-result__head">Производители:</div>
+                  <div class="search-result__body">
+                    <a class="search-result__link" href="/brands/knauf-insulation.html">
+                        <span class="search-result__mark">Kna</span>uf Insulation
+                    </a>
+                    <a class="search-result__link search-result__link--promo" href="/brands/knauf-insulation.html">
+                        <span class="search-result__mark">Kna</span>uf Insulation
+                    </a>
+                    <a class="search-result__link" href="/brands/knauf-insulation.html">
+                        <span class="search-result__mark">Kna</span>uf Insulation
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+        </div>
+        <div class="navbar-main__item navbar-main__item--auth">
+            @@include('_auth-form.html')
+            <div class="hidden">
+                @@include('_auth-user.html')
+            </div>
+        </div>
+        <div class="navbar-main__item navbar-main__item--cart">
+            <a id="isoluxbag" class="btn btn-cart selected" href="https://www.isolux.ru/checkout/cart" title="Перейти в корзину">
+                <span class="isoi isoi-cart icon"></span>
+                <span class="product_num">99</span>
+                <span class="bag_info btn-cart__text hidden-md">
+                    <span class="price">243 201 350,00</span> ₽
+                </span>
+            </a>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-payment" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="isoi isoi-close" aria-hidden="true"></i></button>
+        <h4 class="modal-title">Online-оплата счета</h4>
+      </div>
+      <div class="modal-body">
+        <div class="attention">
+          <p>Для оплаты необходимо ввести номер счета, выставленного Вам нашим специалистом. Номер счета имеет формат СИ12345678 и указан под реквизитами компании (<a class="fancy_gallery" href="http://st0.isolux.ru/media/wysiwyg/sf/is_bill.jpg" target="_blank">пример</a>).</p>
+          <p><strong>ВНИМАНИЕ</strong>: произвести оплату по номеру онлайн заказа невозможно!</p>
+        </div>
+        <h3 class="bold mb-20">Информация о заказе</h3>
+        <form class="form-horizontal form-custom" action="/" id="sberbankForm" method="post" enctype="multipart/form-data">
+
+          <div class="form-custom__group">
+            <div class="form-group">
+              <label for="merchantOrderNumber" class="col-xs-4 col-md-3 control-label">Номер счета <span class="red">*</span></label>
+              <div class="col-xs-8 col-md-9">
+                <input id="merchantOrderNumber" type="text" class="form-control" name="merchantOrderNumber" value="" placeholder="СИ12345678" data-rule-required="true" data-msg-required="Пожалуйста, заполните это поле">
+              </div>
+            </div>
+
+            <div class="form-group has-feedback">
+              <label for="amount_ruble" class="col-xs-4 col-md-3 control-label">Рублей <span class="red">*</span></label>
+              <div class="col-xs-8 col-md-9">
+                <input id="amount_ruble" type="text" class="form-control" name="amount_ruble" value="" placeholder="18378" data-rule-required="true" data-msg-required="Пожалуйста, заполните это поле">
+                <span class="form-control-feedback isoi isoi-ruble" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="amount_penny" class="col-xs-4 col-md-3 control-label">Копеек <span class="red">*</span></label>
+              <div class="col-xs-8 col-md-9">
+                <input id="amount_penny" type="text" class="form-control" name="amount_penny" value="" placeholder="58" data-rule-required="true" data-msg-required="Пожалуйста, заполните это поле">
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="attention-payment">
+          <p><strong>Уважаемые клиенты, просим учесть, что обработка поступающих платежей осуществляется по будним дням с 9 до 18 часов.</strong></p>
+          <p>Для оплаты покупки&nbsp;Вы будете перенаправлены на&nbsp;платежный шлюз ПАО «Сбербанк России» для ввода реквизитов Вашей карты. Пожалуйста, приготовьте Вашу пластиковую карту заранее. Соединение с&nbsp;платежным шлюзом и&nbsp;передача информации
+            осуществляется в&nbsp;защищенном режиме с&nbsp;использованием протокола шифрования SSL.</p>
+        </div>
+
+        <div class="row mb-20">
+          <div class="col-xs-3">
+            <div class="payment-logo">
+              <img src="/img/payment/visa.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="payment-logo">
+              <img src="/img/payment/mastercard.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="payment-logo">
+              <img src="/img/payment/maestro.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="payment-logo">
+              <img src="/img/payment/mir.jpg" alt="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <div class="form-group">
+          <div class="col-xs-12">
+            <p class="text-left">
+              <small>
+                <span class="red">* </span>Поля для обязательного заполнения <br>
+              </small>
+            </p>
+            <span class="button-loader-block">
+              <span class="ajax-3-lines-loader fade"></span>
+            <button type="submit" form="form-provider-block" class="btn btn-success btn-lg btn-block">Отправить</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay hidden"></div>

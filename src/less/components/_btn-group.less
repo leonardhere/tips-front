@@ -1,0 +1,30 @@
+@import url(../variables.less);
+@import url(../mixins.less);
+
+.btn-group {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    &-justified {
+        display: flex;
+        width: 100%;
+    }
+
+    .btn {
+        flex-grow: 1;
+        flex-basis: 0;
+        padding-right: 8px;
+        padding-left: 8px;
+        border-radius: 0;
+
+        &:not(:last-child)
+        {
+            border-right: 1px solid #c3e6fc;
+        }
+    }
+}
+
+.catalog-btn-group {
+    margin-bottom: 10px;
+}

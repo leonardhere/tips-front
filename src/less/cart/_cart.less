@@ -1,0 +1,297 @@
+@import url(../variables.less);
+.btn-cart-controls
+{
+    font-size: 14px;
+    line-height: 1.2;
+
+    .button-outline(#32414a;#32414a; #fff; #fff; #bce3fc; #61bdfc; 11px 10px);
+    margin-right: 15px;
+
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+
+    &-clean
+    {
+        color: #6c8a9b;
+    }
+
+    > .isoi-plus
+    {
+        font-size: 12px;
+        line-height: 18px;
+
+        display: inline-block;
+
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
+
+        border-radius: 50%;
+        background-color: #ffe600;
+    }
+
+    > .isoi-close
+    {
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 18px;
+
+        position: relative;
+        top: 1px;
+
+        display: inline-block;
+
+        margin-right: 10px;
+
+        border-radius: 50%;
+    }
+}
+
+.add-by-sku
+{
+    margin-bottom: -20px;
+
+    small
+    {
+        color: #6c8a9b;
+    }
+
+    .btn-search
+    {
+        padding: 6px 15px;
+        width: auto;
+        height: auto;
+    }
+}
+
+.calc
+{
+    &-btn
+    {
+        padding-top: 6px;
+        padding-bottom: 6px;
+
+        &-wrap
+        {
+            padding-top: 27px;
+            @media (max-width: @screen-sm-max)
+            {
+                margin-bottom: 20px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+
+                border-top: 1px solid #d6effb;
+                border-bottom: 1px solid #d6effb;
+            }
+        }
+    }
+}
+
+// .order-confirm
+// {
+//     text-align: right;
+//     @media (max-width: @screen-xs-max)
+//     {
+//         margin-top: 200px;
+//
+//         text-align: center;
+//     }
+//     .btn + .btn
+//     {
+//         margin-left: 10px;
+//         @media (max-width: 369px)
+//         {
+//             margin-top: 10px;
+//             margin-left: 0;
+//         }
+//     }
+//
+//     .btn {
+//         @media (max-width: 369px)
+//         {
+//             width: 208px;
+//         }
+//     }
+// }
+
+.cart
+{
+    &-checkout {
+        display: flex;
+        width: 100%;
+        flex-direction:column;
+        line-height: 1;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (min-width: @screen-sm-min) {
+            flex-direction: row;
+            margin-right: 0;
+            margin-left: auto;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+        @media (min-width: @screen-md-min) {
+            width: 50%;
+            flex-wrap: wrap;
+        }
+
+        .product-table-buy-total {
+            display: inline-block;
+            padding-right: 15px;
+        }
+
+        &__wrap {
+            width: 100%;
+            @media (min-width: @screen-sm-min) {
+                padding-right: 20px;
+            }
+            @media (min-width: @screen-md-min) {
+                display: flex;
+                min-height: 76px;
+                justify-content: flex-end;
+                align-items: flex-end;
+                flex-wrap: wrap;
+                margin-bottom: 15px;
+                padding-right: 0;
+
+            }
+        }
+    }
+
+    &-continue {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (min-width: @screen-sm-min) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .notice-block {
+            @media (min-width: @screen-sm-min) {
+                width: 55%;
+            }
+        }
+
+    }
+
+    &-header
+    {
+        @media (min-width: @screen-sm-min) {
+            margin-bottom: 15px;
+        }
+        &__btn-wrap
+        {
+            float: left;
+            display: inline-block;
+
+            &--add-by-sku
+            {
+                @media (max-width: @screen-sm-max)
+                {
+                display: block;
+                width: auto;
+                margin-left: -10px;
+                margin-right: -10px;
+                padding: 20px;
+                text-align: center;
+                background-color: #d6effb;
+                float: none;
+
+                    > .btn
+                    {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &-form {
+        margin-bottom: 20px;
+    }
+}
+
+.direct-title {
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 4px;
+    padding-left: 20px;
+
+    @media (min-width: @screen-sm-min) {
+        padding-left: 0;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.delivery
+{
+    &-info
+    {
+        font-size: 14px;
+        border: 1px solid #C3E6FC;
+        background-color: #fff;
+        margin-bottom: 20px;
+        border-radius: 3px;
+
+        @media (max-width: @screen-sm-max) {
+            position: relative;
+        }
+
+        &__title {
+            position: relative;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            color: #32414a;
+            text-transform: uppercase;
+            padding: 11px 25px 9px 15px;
+            font-size: 14px;
+            line-height: 17px;
+            border-bottom: 1px solid #C3E6FC;
+
+            @media (min-width: @screen-md-min) {
+                padding: 15px 0 0 15px;
+                border-bottom: none;
+            }
+        }
+
+        &__qty {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            margin-right: 14px;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            background-color: #FFE600;
+            font-size: 16px;
+            line-height: 1;
+
+            @media (min-width: @screen-md-min) {
+                position: absolute;
+                top: -13px;
+                left: -13px;
+                font-size: 12px;
+                width: 23px;
+                height: 23px;
+            }
+        }
+    }
+}
+
+.map-canvas {
+    overflow: hidden;
+    border-radius: 3px;
+    height: 376px;
+}

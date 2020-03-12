@@ -1,0 +1,26 @@
+@import url(mixins.less);
+@import url(variables.less);
+
+.cms-teknos-promo-2018 {
+  .page-main {
+    padding-top: 0;
+    > .container {
+      width: auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+   p {
+       &.to-anim {
+           opacity: 0;
+           transition: opacity 0.5s ease-out 0.3s;
+           &.in-view {
+               opacity: 1;
+           }
+       }
+   }
+}
+
+@import url(static/_contacts.less);
+@import url(teknos_2018/_teknos.less);

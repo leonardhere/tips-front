@@ -1,0 +1,173 @@
+.lt-label {
+  font-family: 'lt-Roboto', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  position: fixed;
+  z-index: 1;
+  left: 12px;
+  top: auto;
+  bottom: 38px;
+  width: auto;
+  max-width: 500px;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transform: translate3d(0, 0, 0) rotate(90deg);
+  transform: translate3d(0, 0, 0) rotate(90deg);
+  text-indent: 0;
+  -webkit-transition: opacity ease-out 290ms;
+  -o-transition: opacity ease-out 290ms;
+  transition: opacity ease-out 290ms;
+  color: #fff;
+  border: 0 none;
+  border-radius: 0 0 25px 25px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.15)));
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 100%);
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 100%);
+  background-clip: padding-box;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+@media (min-width: 1024px) {
+  .lt-label {
+    background-color: #ffd000;
+    top: auto;
+    left: auto;
+    right: 0;
+    bottom: 12%;
+    -webkit-transform-origin: right top;
+    -ms-transform-origin: right top;
+    transform-origin: right top;
+  }
+}
+.lt-label::before {
+  position: absolute;
+  display: none;
+  z-index: 0;
+  right: -20px;
+  bottom: 2px;
+  left: auto;
+  width: 42px;
+  height: 40px;
+  content: '';
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  color: #ffd000;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2244%22%20height%3D%2236%22%20viewBox%3D%220%200%2044%2036%22%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%22100%25%22%20x2%3D%2250%25%22%20y2%3D%220%25%22%20id%3D%22a%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.15%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20d%3D%22M28.89%2025.465l9.232-15.208C41.562%204.592%2049.722%200%2056.35%200h3v28h-32c.593-.788%201.11-1.637%201.54-2.535zm-14.54%208.502V34h45v-6h-32c-2.736%203.643-7.093%206-12%206-.336%200-.67-.01-1-.033z%22%20id%3D%22b%22%2F%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M14.89%2025.465l9.232-15.208C27.562%204.592%2035.722%200%2042.35%200h3v28h-32c.593-.788%201.11-1.637%201.54-2.535zM.35%2033.967V34h45v-6h-32c-2.736%203.643-7.093%206-12%206-.336%200-.67-.01-1-.033z%22%20fill%3D%22%23ffd000%22%2F%3E%3Cg%20transform%3D%22translate(-14)%22%3E%3Cuse%20fill%3D%22url(%23a)%22%20xlink%3Ahref%3D%22%23b%22%2F%3E%3Cuse%20xlink%3Ahref%3D%22%23b%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+}
+@media (min-width: 1024px) {
+  .lt-label::before {
+    display: block;
+  }
+}
+.lt-label::after {
+  position: absolute;
+  display: none;
+  z-index: 0;
+  right: auto;
+  bottom: 2px;
+  left: -16px;
+  width: 42px;
+  height: 40px;
+  content: '';
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  color: #ffd000;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2244%22%20height%3D%2236%22%20viewBox%3D%220%200%2044%2036%22%3E%3Ctitle%3Eright%3C%2Ftitle%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%22100%25%22%20x2%3D%2250%25%22%20y2%3D%220%25%22%20id%3D%22a%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.15%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20d%3D%22M28.89%2025.465l9.232-15.208C41.562%204.592%2049.722%200%2056.35%200h3v28h-32c.593-.788%201.11-1.637%201.54-2.535zm-14.54%208.502V34h45v-6h-32c-2.736%203.643-7.093%206-12%206-.336%200-.67-.01-1-.033z%22%20id%3D%22b%22%2F%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M31.11%2025.465L21.88%2010.257C18.438%204.592%2010.278%200%203.65%200h-3v28h32c-.593-.788-1.11-1.637-1.54-2.535zm14.54%208.502V34h-45v-6h32c2.736%203.643%207.093%206%2012%206%20.336%200%20.67-.01%201-.033z%22%20fill%3D%22%23ffd000%22%2F%3E%3Cg%20transform%3D%22matrix(-1%200%200%201%2060%200)%22%3E%3Cuse%20fill%3D%22url(%23a)%22%20xlink%3Ahref%3D%22%23b%22%2F%3E%3Cuse%20xlink%3Ahref%3D%22%23b%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+}
+@media (min-width: 1024px) {
+  .lt-label::after {
+    display: block;
+  }
+}
+.lt-label-block {
+  display: block;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  position: relative;
+  z-index: 10;
+  height: 36px;
+  max-width: 310px;
+  font-weight: 500;
+}
+@media (min-width: 1024px) {
+  .lt-label-block {
+    padding-left: 20px;
+    padding-right: 30px;
+  }
+}
+.lt-label-block__txt {
+  display: none;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-left: 0;
+  padding: 0 10px;
+  margin-right: 10px;
+  color: #222222;
+  white-space: nowrap;
+  opacity: 1;
+  height: 36px;
+  line-height: 36px;
+  float: left;
+  max-width: 250px;
+  z-index: 9998;
+}
+@media (min-width: 1024px) {
+  .lt-label-block__txt {
+    display: block;
+  }
+}
+.lt-icon {
+  height: 60px;
+  width: 60px;
+  display: block;
+  text-align: center;
+  line-height: 36px;
+  background: #ffd000;
+  border: 2px solid #ffd000;
+  color: #ffd000;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0.12em 0.31em 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0 0.12em 0.31em 0 rgba(0, 0, 0, 0.26);
+}
+@media (min-width: 1024px) {
+  .lt-icon {
+    position: absolute;
+    height: 36px;
+    width: 36px;
+    top: -11px;
+    right: 0;
+    left: auto;
+    background: #222222;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+.lt-icon__img {
+  width: 36px;
+  height: 36px;
+  top: 14px;
+  position: relative;
+  fill: #222222;
+}
+@media (min-width: 1024px) {
+  .lt-icon__img {
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    fill: #ffd000;
+  }
+}
+
+/*# sourceMappingURL=maps/main-livetex.css.map */

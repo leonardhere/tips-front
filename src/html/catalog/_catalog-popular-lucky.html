@@ -1,0 +1,44 @@
+<section class="catalog-lucky">
+    <div class="container">
+        <h2 class="catalog-header">Подборка удачных интерьерных решений</h2>
+        <div class="row slider-init catalog-lucky-slider">
+            <a class="slider-link" href="#">
+                <img class="img-responsive" src="images/377x377.png" alt="">
+            </a>
+            <a class="slider-link" href="#">
+                <img class="img-responsive" src="https://placehold.it/377x377/80CBC4" alt="">
+            </a>
+            <a class="slider-link" href="#">
+                <img class="img-responsive" src="images/377x377.png" alt="">
+            </a>
+            <a class="slider-link" href="#">
+                <img class="img-responsive" src="images/377x377.png" alt="">
+            </a>
+        </div>
+    </div>
+</section>
+<script>
+    $(function() {
+        $('.catalog-lucky-slider').slick({
+            mobileFirst: true,
+            adaptiveHeight: true,
+            infinite: true,
+            dots: false,
+            slidesToShow: 1,
+            arrows: true,
+            accessibility: false,
+            responsive: [{
+                breakpoint: 790,
+                settings: {
+                    arrows: true
+                }
+            }, {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 3,
+                    arrows: true
+                }
+            }]
+        });
+    });
+</script>

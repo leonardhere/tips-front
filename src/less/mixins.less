@@ -1,0 +1,143 @@
+@import url(variables.less);
+.button-variant-outline(@color; @background; @border) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+
+  &:focus,
+  &.focus {
+    color: @background;
+    background-color: @color;
+        border-color: @border;
+        text-decoration: none;
+  }
+  &:hover {
+    color: @background;
+    background-color: @color;
+        border-color: @border;
+        text-decoration: none;
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @background;
+    background-color: @color;
+        border-color: @border;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: @background;
+      background-color: @color;
+          border-color: @border;
+    }
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: @background;
+          border-color: @border;
+    }
+  }
+}
+
+.button-variant-outline-invert(@color; @background; @border) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+
+  &:focus,
+  &.focus {
+    color: @background;
+    background-color: @color;
+        border-color: @border;
+        text-decoration: none;
+  }
+  &:hover {
+    color: @background;
+    background-color: @color;
+        border-color: @border;
+        text-decoration: none;
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @background;
+    background-color: @color;
+        border-color: @border;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: @background;
+      background-color: @color;
+          border-color: @border;
+    }
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: @background;
+          border-color: @border;
+    }
+  }
+}
+
+.button-outline(@color; @color-hover; @bgc; @bgc-hover; @border; @border-hover; @padding) {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    border-radius: 3px;
+    text-decoration: none;
+    border-width: 1px;
+    border-style: solid;
+
+    color: @color;
+    background-color: @bgc;
+    border-color: @border;
+    padding: @padding;
+
+    &:focus,
+    &:hover,
+    &:focus:hover,
+    .open > & {
+      color: @color-hover;
+      background-color: @bgc-hover;
+          border-color: @border-hover;
+          text-decoration: none;
+    }
+
+    &[disabled],
+    &.disabled {
+      &:focus,
+      &:hover,
+      &:focus:hover,
+      .open > & {
+        color: @color;
+        background-color: @bgc;
+            border-color: @border;
+            text-decoration: none;
+      }
+    }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ISO</title>
+    <link rel="stylesheet" href="skin/frontend/adaptive/default/css/bootstrap.css">
+    <link rel="stylesheet" href="skin/frontend/adaptive/default/css/bootstrap-select.css">
+    <link rel="stylesheet" href="skin/frontend/adaptive/default/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="skin/frontend/adaptive/default/css/main.css">
+    <link rel="stylesheet" href="skin/frontend/adaptive/default/css/main-knauf18.css">
+    <script type="text/javascript" src="skin/frontend/adaptive/default/js/jquery-2.1.1.min.js"></script>
+    <!--[if lte IE 8]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="cms-knauf-promo-2018">
+
+    <header class="page-header">
+        <!-- @@include('html/_notice-block.html') -->
+        @@include('html/_site-controls.html')
+         @@include('html/_navbar.html')
+         @@include('html/_navbar-goods.html')
+    </header>
+    <main class="page-main">
+        <div class="container">
+            @@include('html/knauf_2018/_header.html')
+            @@include('html/knauf_2018/_leto.html')
+            @@include('html/knauf_2018/_spec.html')
+            @@include('html/knauf_2018/_advantages.html')
+            @@include('html/knauf_2018/_offerta.html')
+        </div>
+    </main>
+    <footer class="page-footer">
+        @@include('html/_page-footer.html')
+    </footer>
+    <script>
+        $(function () {
+            var productList = [
+                {
+                    name: 'Knauf Ротбанд серая',
+                    measure: '30 кг',
+                    mltcty: 'х10',
+                    href: 'https://www.isolux.ru/shtukaturka-gipsovaya-universalnaya-knauf-rotband-seraya-30-kg.html',
+                    img: 'https://st0.isolux.ru/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/8/d/8d7f15d99af2bc993de1347e9358387b_1_.jpg?kar=1&kf=1&kt=1&co=1&rgb%5B0%5D=255&rgb%5B1%5D=255&rgb%5B2%5D=255&ang=ang&qua=90',
+                    price: '3 950',
+                    priceOld: '4 392'
+                },
+                {
+                    name: 'ГКЛ Knauf',
+                    measure: '2500х1200х12.5 мм',
+                    mltcty: 'х15',
+                    href: 'https://www.isolux.ru/gipsokartonnyy-list-knauf-2500kh1200kh12-5-mm.html',
+                    img: 'https://st0.isolux.ru/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/f/i/file_297_14.jpg?kar=1&kf=1&kt=1&co=1&rgb%5B0%5D=255&rgb%5B1%5D=255&rgb%5B2%5D=255&ang=ang&qua=90',
+                    price: '3 765',
+                    priceOld: '4 207'
+                },
+                {
+                    name: 'Knauf Диамант Короед',
+                    measure: '25 кг',
+                    mltcty: 'х10',
+                    href: 'https://www.isolux.ru/shtukaturka-knauf-diamant-koroyed-zerno-1-5-mm-25-kg.html',
+                    img: 'https://st0.isolux.ru/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/_/k/_koroed_1.5__1.jpg?kar=1&kf=1&kt=1&co=1&rgb%5B0%5D=255&rgb%5B1%5D=255&rgb%5B2%5D=255&ang=ang&qua=90',
+                    price: '3 624,6',
+                    priceOld: '4 066,6'
+                },
+                {
+                    name: 'ГКЛ Knauf влагостойкий',
+                    measure: '2500х1200х9.5 мм',
+                    mltcty: 'х15',
+                    href: 'https://www.isolux.ru/gipsokartonnyy-list-knauf-vlagostoykiy-2500kh1200kh9-5-mm.html',
+                    img: 'https://st0.isolux.ru/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/f/i/file_297_16.jpg?kar=1&kf=1&kt=1&co=1&rgb%5B0%5D=255&rgb%5B1%5D=255&rgb%5B2%5D=255&ang=ang&qua=90',
+                    price: '5 115',
+                    priceOld: '5 557'
+                },
+                {
+                    name: 'Knauf Севенер',
+                    measure: '25 кг',
+                    mltcty: 'х10',
+                    href: 'https://www.isolux.ru/shtukaturno-kleyevaya-smes-polimernaya-knauf-sevener-25-kg.html',
+                    img: 'https://st0.isolux.ru/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/f/i/file_204_2_1_.jpg?kar=1&kf=1&kt=1&co=1&rgb%5B0%5D=255&rgb%5B1%5D=255&rgb%5B2%5D=255&ang=ang&qua=90',
+                    price: '4 869',
+                    priceOld: '5 311'
+                }
+            ];
+            var name = $('#lp-of-name');
+            var img = $('#lp-of-img');
+            var mltcty = $('#lp-of-mltcty');
+            var href = $('#lp-of-href');
+            var measure = $('#lp-of-measure');
+            var price = $('#lp-of-price');
+            var priceOld = $('#lp-of-priceOld');
+            var showProduct = function() {
+                productList.forEach(function (e, i) {
+                    setTimeout(function(){
+                        name.text(e.name);
+                        img.fadeOut(500, function() {
+                            img.attr('src', e.img);
+                        }).fadeIn(500);
+                        mltcty.text(e.mltcty);
+                        href.attr('href', e.href);
+                        measure.text(e.measure);
+                        price.text(e.price);
+                        priceOld.text(e.priceOld);
+                    }, i * 5000);
+                })
+            }
+            showProduct();
+            setInterval(showProduct, productList.length * 5000);
+
+            $('body').addClass('page-loaded');
+
+            $.fn.isInViewport = function() {
+                var elementTop = $(this).offset().top;
+                var elementBottom = elementTop + $(this).outerHeight();
+
+                var viewportTop = $(window).scrollTop();
+                var viewportBottom = viewportTop + $(window).height();
+
+                return elementBottom > viewportTop && elementTop < viewportBottom;
+            };
+
+            $(window).on('resize scroll', function() {
+                $('.to-anim').each(function() {
+                    if ($(this).isInViewport()) {
+                        $(this).addClass('in-view');
+                    }
+                });
+            });
+            $(window).scroll();
+        });
+    </script>
+
+    <a href="#" class="brn btn-primary btn-scroll-up"><span class="isoi isoi-angle-up"></span></a>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script type="text/javascript" src="skin/frontend/adaptive/default/js/slick.min.js"></script>
+    <script type="text/javascript" src="js/hammer.min.js"></script>
+    <script type="text/javascript" src="js/jquery.hammer.js"></script>
+    <script type="text/javascript" src="skin/frontend/adaptive/default/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="skin/frontend/adaptive/default/js/bootstrap-select.js"></script>
+    <script type="text/javascript" src="skin/frontend/adaptive/default/js/jquery.menu-aim.js"></script>
+    <script type="text/javascript" src="skin/frontend/adaptive/default/js/validate/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="skin/frontend/adaptive/default/js/validate/messages_ru.min.js"></script>
+    <script type="text/javascript" src="skin/frontend/adaptive/default/js/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="skin/frontend/adaptive/default/js/main.js"></script>
+</body>
+
+</html>

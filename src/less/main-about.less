@@ -1,0 +1,222 @@
+@import url(variables.less);
+@import url(fullpage.min.less);
+
+.cms-about .notice--main {
+    display: none!important;
+}
+
+.cms-about {
+    .page-main > .container {
+        width: auto!important;
+        padding: 0!important;
+    }
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    // min-height: 100vh;
+    // height: 100vh;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #fff;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    padding-right: 10px;
+    // overflow: hidden;
+
+
+    @media (min-width: @screen-sm-min) {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    // &.active {
+    //     .fp-tableCell {
+    //         transform: translateY(0);
+    //     }
+    // }
+    //
+    // .fp-tableCell {
+    //     transition: transform cubic-bezier(0.22, 0.44, 0, 1) 1.5s;
+    //     transform: translateY(-30%);
+    // }
+
+    .btn-about {
+        position: absolute;
+        left: calc(~'50% - 14px');
+        bottom: 30px;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        color: #32414A;
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: bold;
+        flex-shrink: 0;
+        padding: 0;
+        background-color: #fff;
+
+        &--anim {
+            animation: shadow-pulse 2s infinite;
+        }
+    }
+}
+
+.about-h1 {
+    width: 100%;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+
+    @media (min-width: @screen-sm-min) {
+        font-size: 60px;
+        line-height: 70px;
+        margin-bottom: 10px;
+    }
+}
+
+.about-title {
+    width: 100%;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+
+    @media (min-width: @screen-sm-min) {
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 100px;
+    }
+}
+
+.about-col {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    margin-bottom: 20px;
+    @media (min-width: @screen-sm-min) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.about-num {
+    font-size: 30px;
+    line-height: 30px;
+    width: 30%;
+    flex-shrink: 0;
+    margin-right: 20px;
+
+    @media (min-width: @screen-sm-min) {
+        font-size: 40px;
+        line-height: 60px;
+        width: auto;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    @media (min-width: @screen-md-min) {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    @media (min-width: @screen-lg-min) {
+        font-size: 60px;
+        line-height: 70px;
+    }
+}
+
+.about-logo {
+    margin-bottom: 30px;
+    height: 60px;
+    flex-shrink: 0;
+
+    @media (min-width: @screen-sm-min) {
+        margin-bottom: 60px;
+        height: 154px;
+    }
+
+    &-title {
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+
+        @media (min-width: @screen-sm-min) {
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+}
+
+.about-ico {
+    display: none;
+    height: 60px;
+    margin-bottom: 20px;
+
+    @media (min-width: @screen-sm-min) {
+        display: block;
+    }
+}
+
+.page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 992;
+}
+
+.about-breadcrumb {
+    display: none;
+    position: fixed;
+    width: 100%;
+    color: #fff;
+
+    @media (min-width: @screen-sm-min) {
+        display: block;
+        top: 74px;
+    }
+
+    @media (min-width: @screen-md-min) {
+        top: 174px;
+    }
+
+
+    .breadcrumb > li {
+        a > {
+            color: #fff;
+        }
+
+        &::before {
+            color: #fff;
+        }
+    }
+}
+
+@keyframes shadow-pulse
+{
+     0% {
+          box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+     }
+     100% {
+          box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+     }
+}
+
+@keyframes stroke-width {
+  60% {
+    stroke-width: 200;
+    }
+  90% {
+    stroke-width: 0;
+    }
+}
