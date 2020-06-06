@@ -29,7 +29,7 @@ class ApiService {
 
 async function useRequest(request) {
     const response = await fetch(request)
-    return response.json
+    return response.json()
 }
 
 export const apiService = new ApiService('https://leonard-js-first.firebaseio.com')
