@@ -1,3 +1,0 @@
-<svg class="loader-spin" viewBox="25 25 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <circle class="loader-spin__circle" cx="50" cy="50" r="10" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
-</svg>
