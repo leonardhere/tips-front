@@ -1,0 +1,30 @@
+@import '../../../common/styles/variables.scss';
+@import '../../../common/styles/mixins.scss';
+
+.qr-code {
+    width: 100%;
+    height: 376px;
+    padding: 46px 113px;
+    box-sizing: border-box;
+    @extend %display-flex-column;
+
+    @include xs-down {
+        padding: 46px 20px;
+
+        h2 {
+            font-size: 26px;
+        }
+
+        .main-btn {
+            width: 100%;
+        }
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: 0.65px;
+        color: #222222;
+    }
+}

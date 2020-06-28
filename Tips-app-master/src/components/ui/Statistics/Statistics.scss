@@ -1,0 +1,136 @@
+@import '../../../common/styles/variables.scss';
+@import '../../../common/styles/mixins.scss';
+
+// colors for line's gradient
+// #2E68E4
+// #2EEFC1
+
+.statistics {
+    width: 416px;
+    @extend %display-flex-column;
+    .statistics-card {
+        position: relative;
+        margin-top: 32px;
+        width: 416px;
+        height: 212px;
+        padding: 20px 26px;
+        box-sizing: border-box;
+        border-radius: 30px;
+
+        @include xs-down {
+            width: 100%;
+        }
+
+        &:first-child {
+            margin-top: 0;
+            background: #FFFFFF;
+            box-shadow: 0px 5px 22.37px rgba(162, 162, 162, 0.18);
+            .value {
+                color: #000000;
+            }
+        }
+        &:nth-child(2) {
+            background: #81FEC6;
+            box-shadow: 0px 5px 22.37px rgba(129, 254, 198, 0.75);
+        }
+        &:nth-child(3) {
+            background: #96ADFF;
+            box-shadow: 0px 5px 22.37px rgba(150, 173, 255, 0.75);
+        }
+        .goal-btn {
+            position: absolute;
+            top: 15px;
+            right: 17px;
+            width: 30px;
+            height: 30px;
+            @extend %display-flex-row;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(238, 238, 238, 0.3);
+            transition: 0.3s;
+            &:hover {
+                background: #E4EAFF;
+            }
+            span {
+                width: 2.97px;
+                height: 2.91px;
+                border-radius: 1.5px;
+                background: #C7C7C7;
+                &::before, &::after {
+                    content: '';
+                    position: relative;
+                    display: block;
+                    top: -5px;
+                    width: 2.97px;
+                    height: 2.91px;
+                    border-radius: 1.5px;
+                    background: #C7C7C7;
+                }
+                &::after {
+                    top: 2px;
+                }
+            }
+        }
+        h3, .value {
+            font-family: 'Gill Sans SemiBold';
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.802294px;
+            color: $blackColor;
+        }
+        .value {
+            margin-top: 10px;
+            margin-right: 0;
+            @extend %display-flex-row;
+            justify-content: flex-start;
+            color: #FFFFFF;
+        }
+        .goal-value {
+            font-family: 'Gill Sans SemiBold';
+            color: #00000065;
+        }
+        canvas {
+            margin-top: 10px;
+        }
+        .date-range {
+            margin-top: 9px;
+            font-weight: 600;
+            font-size: 9px;
+            letter-spacing: 1.20344px;
+            color: #444444;
+        }
+        .percent {
+            margin-left: 13.21px;
+            // vertical-align: middle;
+            font-weight: 300;
+            font-size: 15px;
+            letter-spacing: 1.47087px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+    }
+    .goal-card {
+        @extend %display-flex-column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        canvas {
+            align-self: flex-end;
+            margin-right: 20px;
+            margin-top: -35px;
+        }
+        .value {
+            margin-top: 0;
+        }
+    }
+
+    @include xs-down {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .statistics {
+        flex-wrap: wrap;
+    }
+}

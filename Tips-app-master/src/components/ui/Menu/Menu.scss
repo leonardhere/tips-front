@@ -1,0 +1,111 @@
+@import '../../../common/styles/variables.scss';
+@import '../../../common/styles/mixins.scss';
+
+nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 116px;
+    height: 100vh;
+    padding: 46px 0;
+    box-sizing: border-box;
+    background: $menuBackgroundColor;
+    border-right: 1px solid #F0F0F0;
+    transition: 0.3s ease;
+    overflow-y: hidden;
+    z-index: 2;
+    ul {
+        width: 100%;
+        list-style-type: none;
+        @extend %display-flex-column;
+        justify-content: flex-start;
+        a {
+            margin-top: 56px;
+            padding: 12px;
+            box-sizing: border-box;
+            @extend %display-flex-row;
+            justify-content: space-around;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: 0.2s;
+            &:not(.active-link):hover {
+                background: $menuActiveLink;
+            }
+            &:first-child {
+                margin-top: 0;
+                &:hover {
+                    background: none;
+                }
+            }
+            &:nth-child(2) {
+                margin-top: 90px;
+            }
+            &:nth-child(4) {
+                // margin-top: 181px;
+            }
+        }
+    }
+
+    @include xs-down {
+        padding: 61px;
+        background: rgb(252, 252, 252);
+    }
+
+    h2 {
+        margin-top: 0;
+        font-family: 'Advent Pro';
+        font-size: 40px;
+        font-weight: 400;
+        letter-spacing: 5px;
+        color: #96ADFF;
+    }
+}
+
+.active-link {
+    background: $menuActiveLink;
+}
+
+.mobile-menu {
+    width: 100%;  
+    ul {
+        display: block;
+        margin-top: 85px;
+    }
+    li {
+        margin-top: 21px;
+        width: 100%;
+        a {
+            margin-top: 0;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            @extend %display-flex-row;
+            justify-content: flex-start;
+            border-radius: 10px;
+            font-size: 20px;
+            letter-spacing: 5px;
+            color: #1D1D1D;
+
+            img {
+                margin-right: 29px;
+            }
+        }
+    }
+}
+
+
+// Tablet
+@media screen and (max-width: 768px) {
+    nav {
+        width: 84px;
+    }
+}
+
+
+// Mobile
+@media screen and (max-width: 600px) {
+    nav {
+        width: 100%;
+        left: -100%;
+    }
+}

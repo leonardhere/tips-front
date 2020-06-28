@@ -1,0 +1,89 @@
+%display-flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%display-flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Font colors */
+$blackColor: #222222;
+$greyColor: #AAAAAA;
+$menuLinkColor: #EEEEEE;
+
+/* Backgrounds */
+$greenColor: #81FEC6;
+$blueColor: #233E63;
+$landingBg: rgba(5, 4, 4, 0.55);
+$bodyBackground: #F9FEFF;
+$authBackground: linear-gradient(0deg, $blueColor -0.07%, $greenColor 100.07%), rgba(236, 236, 236, 0.0001);
+// $menuBackgroundColor: linear-gradient(87.89deg, rgba(85, 85, 85, 0.25) 6.05%, rgba(85, 85, 85, 0.0001) 93.67%), #333333;
+$menuBackgroundColor: none;
+$sidebarBackgroundColor: none;
+// $menuActiveLink: linear-gradient(90deg, $blueColor 0%, $greenColor 100%);
+$menuActiveLink: rgba(218, 243, 247, 0.4);
+$verticalGradient: linear-gradient(0.32deg, $blueColor -41.28%, $greenColor 100.81%), $blackColor;
+
+
+// Animation speed
+$preloader-anim-speed: 2s;
+
+
+// Animations
+
+@keyframes spot {
+    0% {transform: translateX(0);}
+    30% {transform: translateX(20px);}
+    60% {transform: translateY(20px);}
+    100% {transform: translateY(0)}
+}
+
+@keyframes male {
+    0% {transform: translateX(0);}
+    15% {transform: translateX(15px);}
+    30% {transform: translateX(15px) translateY(15px);}
+    60% {transform:  translateX(15px) translateY(15px);}
+    75% {transform: translateY(30px);}
+    100% {transform: translateY(0)}
+}
+
+@keyframes male {
+    0% {transform: translateX(0);}
+    15% {transform: translateX(-15px);}
+    30% {transform: translateX(-30px);}
+    60% {transform:  translateX(-15px) translateY(-15px);}
+    75% {transform: translateY(-30px);}
+    100% {transform: translateY(0)}
+}
+
+@keyframes form {
+    0% {transform: translateX(0);}
+    30% {transform: translateX(10px);}
+    60% {transform: translateY(10px);}
+    100% {transform: translateY(0)}
+}
+
+// styles for CssTransition library
+.show-hide-animation-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+.show-hide-animation-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+.show-hide-animation-exit {
+    opacity: 1;
+}
+.show-hide-animation-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+}

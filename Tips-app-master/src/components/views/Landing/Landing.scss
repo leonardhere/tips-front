@@ -1,0 +1,167 @@
+@import '../../../common/styles/variables.scss';
+@import '../../../common/styles/mixins.scss';
+
+.landing {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    // background: linear-gradient(to right, $landingBg, $landingBg), url('../../../assets/images/landing-bg.jpg');
+    background-color: #F9FEFF;
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    z-index: 5;
+    .content {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        padding: 39px;
+        box-sizing: border-box;
+        z-index: 6;
+    }
+    h1 {
+        margin-left: 41px;
+        font-family: 'Advent Pro';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 105px;
+        text-align: left;
+        letter-spacing: 17px;
+        color: #FFFFFF;
+
+        @include xs-down {
+            margin-left: 0px;
+            text-align: center;
+            font-size: 50px;
+            letter-spacing: 8px;
+        }
+    }
+    h2 {
+        margin-top: 15px;
+        margin-left: 51px;
+        text-align: left;
+        font-family: 'Advent Pro';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        letter-spacing: 4px;
+        color: #FFFFFF;
+
+        @include xs-down {
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+    header,
+    footer {
+        width: 100%;
+        @extend %display-flex-row;
+        justify-content: flex-end;
+        a {
+            margin-right: 38px;
+            text-decoration: none;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    footer {
+        position: absolute;
+        bottom: 45px;
+        right: 39px;
+        a {
+            font-weight: 400;
+        }
+
+        @include xs-down {
+            right: 0;
+            width: 100%;
+            padding: 0 25px;
+            box-sizing: border-box;
+            a {
+                margin-right: 0;
+                font-size: 14px;
+            }
+        }
+    }
+    header a {
+        width: 176px;
+        height: 58px;
+        box-sizing: border-box;
+        @extend %display-flex-row;
+        justify-content: center;
+        background: #81FEC6;
+        text-align: center;
+        font-size: 15px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        border-radius: 10px;
+        color: #222222;
+        &:last-child {
+            background: #96ADFF;
+            color: #FFFFFF;
+
+            @include xs-down {
+                border: 1px solid white;
+            }
+        }
+    }
+    a {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 5px;
+        color: #1D1D1D;
+    }
+    img {
+        position: absolute;
+        transition: 0.3s;
+        // animation: spot 6s infinite alternate;
+    }
+    .blue-spot {
+        top: -20px;
+        left: -20px;
+        // animation: spot 6s infinite alternate;
+    }
+    .green-spot {
+        bottom: -100px;
+        right: -100px;
+        // animation: spot 6s infinite alternate;
+    }
+    .gray-spot {
+        bottom: -50px;
+        left: -42px;
+    }
+    .male {
+        top: 385px;
+        left: 963px;
+        // animation: male 6s infinite alternate;
+    }
+    .female {
+        top: 370px;
+        left: 126px;
+        // animation: female 6s infinite alternate;
+    }
+    .form-icon {
+        top: 487px;
+        left: 321px;
+        // animation: form 6s infinite alternate;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .landing {
+        h1 {
+            font-size: 65px;
+        }
+        footer {
+            justify-content: space-between;
+            a {
+                margin-right: 0;
+            }
+        }
+    }
+}

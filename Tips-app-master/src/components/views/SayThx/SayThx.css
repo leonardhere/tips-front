@@ -1,0 +1,625 @@
+:root {
+    --pure-material-primary-rgb: 33, 150, 243;
+    --pure-material-onprimary-rgb: 255, 255, 255;
+    --pure-material-surface-rgb: 255, 255, 255;
+    --pure-material-onsurface-rgb: 0, 0, 0;
+}
+
+.thx-header {
+    font-size: 0;
+    height: 60px;
+    padding: 0 20px;
+}
+
+#logo {
+    width: 50%;
+    display: inline-block;
+    font-size: 16px;
+    /* line-height: 60px; */
+}
+
+#question_btn {
+    width: 50%;
+    display: inline-block;
+    font-size: 16px;
+    /* line-height: 60px; */
+    text-align: right;
+}
+
+div#bg_bg {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+div#question_block {
+    position: fixed;
+    z-index: 2;
+    background-color: #fff;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    border-radius: 5px;
+    display: none;
+}
+
+div#question_block h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.one_question {
+    /* margin-bottom: 20px; */
+}
+
+.one_question p {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+div#question_block_in {
+    padding: 15px;
+}
+
+div#fl_block {
+    margin-top: 40px;
+    text-align: center;
+}
+
+div#fl_photo {
+    width: 140px;
+    margin: 0 auto;
+    border-radius: 50%;
+    height: 140px;
+}
+
+
+div#fl_name {
+    margin-top: 30px;
+    font-size: 20px;
+    /* line-height: 30px; */
+}
+
+div#fl_place {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #555;
+}
+
+#fl_photo #img_photo {
+    width: 100%;
+    height: 140px;
+    border-radius: 50%;
+}
+
+div#send_block {
+    text-align: center;
+}
+
+div#summ_block {
+    /* margin-bottom: 20px; */
+}
+
+div#summ_input {
+    width: 250px;
+    margin: 0 auto;
+    height: 40px;
+    /* line-height: 40px; */
+    border-bottom: 1px solid #ccc;
+}
+
+#summ_input input[type="text"] {
+    font-size: 20px;
+    outline: none;
+    width: 100%;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+}
+
+#summ_input input[type="text"]::placeholder {
+    font-size: 10px;
+}
+
+div#select_more_summ {
+    margin-top: 10px;
+    font-size: 0;
+}
+
+div#comment_input input {
+    font-size: 18px;
+    outline: none;
+    width: 100%;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+}
+
+div#comment_input {
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+div#send_block {
+    margin-top: 40px;
+}
+
+.thx-main {
+    padding: 0 20px;
+}
+
+.one_pay_block {
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.one_pay_block label {
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+input#card_num {
+    line-height: 40px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 100%;
+}
+
+.one_pay_block_1_2 {
+    display: inline-block;
+    width: 48%;
+}
+
+div#pay_block {
+    font-size: 0;
+}
+
+input#card_data {
+    line-height: 40px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 100%;
+}
+
+input#card_cvc {
+    line-height: 40px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 100%;
+}
+
+.one_pay_block_1_2_left {
+    margin-right: 4%;
+}
+
+.one_pay_block_check {
+    position: relative;
+    /* line-height: 30px; */
+}
+
+.one_pay_block_check label {
+    font-size: 10px;
+    display: block;
+    line-height: 30px;
+}
+
+
+
+.one_select {
+    font-size: 12px;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #382adf;
+    color: #fff;
+    margin: 0 7px;
+}
+
+.one_pay_block_btn {
+    margin: 100px 0 0;
+    /* margin: 20px 0 0; */
+}
+
+.one_pay_block_btn button {
+    width: 100%;
+    height: 44px;
+    background-color: #382adf;
+    color: #fff;
+    font-size: 16px;
+    line-height: 44px;
+    border: 0;
+    box-shadow: none;
+    text-transform: uppercase;
+}
+
+div#or {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 11px;
+    line-height: 20px;
+}
+
+div#apple_pay_btn {
+    border-radius: 3px;
+}
+
+div#apple_pay_block {
+    margin-top: 20px;
+    height: 40px;
+    border: 2px solid #333;
+    text-align: center;
+}
+
+.pure-material-checkbox {
+    z-index: 0;
+    position: relative;
+    display: inline-block;
+    color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+    font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Input */
+.pure-material-checkbox>input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    z-index: -1;
+    position: absolute;
+    left: -10px;
+    top: -8px;
+    display: block;
+    margin: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+    box-shadow: none;
+    outline: none;
+    opacity: 0;
+    transform: scale(1);
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+/* Span */
+.pure-material-checkbox>span {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Box */
+.pure-material-checkbox>span::before {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 3px 11px 3px 1px;
+    border: solid 2px;
+    /* Safari */
+    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+    border-radius: 2px;
+    width: 26px;
+    height: 26px;
+    vertical-align: top;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+/* Checkmark */
+.pure-material-checkbox>span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    width: 10px;
+    height: 5px;
+    border: solid 2px transparent;
+    border-right: none;
+    border-top: none;
+    transform: translate(3px, 4px) rotate(-45deg);
+}
+
+
+
+.pure-material-checkbox>input:checked+span::before,
+.pure-material-checkbox>input:indeterminate+span::before {
+    border-color: rgb(56, 42, 223);
+    background-color: rgb(56, 42, 223);
+}
+
+.pure-material-checkbox>input:checked+span::after,
+.pure-material-checkbox>input:indeterminate+span::after {
+    border-color: rgb(255, 255, 255);
+}
+
+.pure-material-checkbox>input:indeterminate+span::after {
+    border-left: none;
+    transform: translate(4px, 3px);
+}
+
+
+/* Active */
+.pure-material-checkbox>input:active {
+    opacity: 1;
+    transform: scale(0);
+    transition: transform 0s, opacity 0s;
+}
+
+.pure-material-checkbox>input:active+span::before {
+    border-color: rgb(33, 150, 243);
+}
+
+.pure-material-checkbox>input:checked:active+span::before {
+    border-color: transparent;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Disabled */
+.pure-material-checkbox>input:disabled {
+    opacity: 0;
+}
+
+.pure-material-checkbox>input:disabled+span {
+    color: rgba(0, 0, 0, 0.38);
+    cursor: initial;
+}
+
+.pure-material-checkbox>input:disabled+span::before {
+    border-color: currentColor;
+}
+
+.pure-material-checkbox>input:checked:disabled+span::before,
+.pure-material-checkbox>input:indeterminate:disabled+span::before {
+    border-color: transparent;
+    background-color: currentColor;
+}
+
+div#quest_icon {
+    position: absolute;
+    width: 26px;
+    top: 15px;
+    right: 2px;
+    line-height: 26px;
+    height: 26px;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #fff;
+}
+#quest_icon img{width: 100%;}
+
+div#question_btn {
+    position: relative;
+    height: 60px;
+    vertical-align: middle;
+
+}
+
+div#close_question {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+div#close_question img {
+    width: 80%;
+}
+
+div#comment_stars {
+    font-size: 0;
+    margin-top: 10px;
+}
+
+div#apple_pay_btn img {
+    height: 40px;
+}
+
+
+div#close_question,
+.one_star,
+div#quest_icon,
+.one_select {
+    cursor: pointer;
+}
+
+.one_star {
+    background-image: url('../../../assets/images/saythx/star_12.svg');
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.one_star.active_star {
+    background-image: url(../../../assets/images/saythx/star.svg)
+}
+
+div#success_screen {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 160px;
+    width: 160px;
+    margin-top: -80px;
+    margin-left: -80px;
+}
+
+div#success_text {
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+div#success_block {
+    text-align: center;
+}
+
+div#success_block {
+    width: 150px;
+}
+
+div#success_block img {
+    width: 120px;
+}
+
+div#success_text {
+    margin-top: 10px;
+}
+div#success_text {
+    font-size: 47px;
+}
+
+div#success_screen {
+    width: 220px;
+    margin-left: -110px;
+    text-align: center;
+}
+div#success_block {
+    width: 220px;
+}
+
+div#success_screen {
+    margin-left: -110px;
+}
+
+div#fl_name {
+    font-size: 24px;
+}
+
+div#fl_place {
+    font-size: 14px;
+    color: #000;
+}
+
+div#summ_input {
+    width: 280px;
+    border-bottom: 1px solid #193AFF;
+}
+
+div#comment_input {
+    width: 280px;
+    border-bottom: 1px solid #193AFF;
+}
+
+.one_star {
+    width: 44px;
+    height: 44px;
+}
+
+.one_select {
+    font-size: 14px;
+}
+
+.one_pay_block label {
+    font-family: Helvetica;
+    font-size: 9px;
+    color: #9F9FAF;
+}
+
+input#card_num {
+    color: #4C4B5E;
+}
+
+.pure-material-checkbox>span::before {
+    width: 24px;
+    height: 24px;
+}
+
+.one_pay_block_check label span {
+    font-size: 12px;
+    color: rgba(77, 77, 77, 0.3);
+}
+
+div#or {
+    color: rgba(77, 77, 77, 0.3);
+}
+div#logo {
+    padding: 22px 0;
+}
+
+div#logo img {
+    width: 48px;
+}
+div#fl_photo {
+    position: relative;
+}
+
+div#img_round {
+    position: absolute;
+}
+img#img_photo {
+    position: relative;
+    z-index: 2;
+}
+
+div#img_round {
+    z-index: 1;
+    width: 190px;
+    top: -50px;
+    left: -25px;
+}
+
+div#img_round img {
+    width: 100%;
+}
+.one_pay_block_check {
+    margin-top: 30px;
+}
+
+div#or {
+    /* margin-bottom: 10px; */
+}
+
+.pure-material-checkbox>span::after {
+    width: 8px;
+    height: 4px;
+    border: solid 1px transparent;
+    border-right: none;
+    border-top: none;
+    border-color: #fff;
+}
+
+.one_select {
+    background-color: #2544FF;
+    border: 0;
+    border-radius: 2px;
+}
+div#bg_bg {
+    z-index: 100;
+}
+
+div#question_block {
+    z-index: 101;
+}

@@ -1,0 +1,69 @@
+@import '../../../common/styles/variables.scss';
+@import '../../../common/styles/mixins.scss';
+
+.withdrawal {
+    width: 635px;
+    height: 438px;
+    padding: 46px 113px;
+    box-sizing: border-box;
+    @extend %display-flex-column;
+
+    @include xs-down {
+        width: 100%;
+        padding: 26px 15px;
+
+        .main-btn {
+            width: 100%;
+        }
+    }
+
+    .main-input_with-label {
+        width: 100%;
+        .main-input {
+            width: 100%;
+        }
+    }
+    h2 {
+        font-weight: 600;
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: 0.65px;
+        color: #222222;
+    }
+    .input-row {
+        width: 100%;
+        height: 60px;
+        @extend %display-flex-row;  
+    }
+    .balance-error {
+        position: relative;
+        &::after {
+            content: 'Недостаточно средств';
+            position: absolute;
+            display: block;
+            top: 68px;
+            text-align: center;
+            width: 100%;
+            font-size: 16px;
+            color: rgb(235, 51, 51);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .withdrawal {
+        .input-row {
+            height: 140px;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+        input[type=text] {
+            width: 100%;
+            height: 60px;
+        }
+        button {
+            align-self: center;
+        }
+    }
+}

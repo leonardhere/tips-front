@@ -1,0 +1,83 @@
+@import '../../../common/styles/variables.scss';
+
+.wallet {
+    position: absolute;
+    top: 45px;
+    left: -380px;
+    width: 370px;
+    padding: 31px 35px;
+    box-sizing: border-box;
+    @extend %display-flex-column;
+    justify-content: flex-start;
+    background: #FAFAFA;
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+    h2 {
+        width: 100%;
+        padding: 0 35px 31px;
+        box-sizing: initial;
+        font-weight: 600;
+        font-size: 24px;
+        letter-spacing: 1.2px;
+        color: #222222;
+    }
+    .wallet_border {
+        width: 100%;
+        height: 3px;
+        padding: 0 35px;
+        background: linear-gradient(90deg, #233E63 0%, #81FEC6 100%), #222222;
+        box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.05);
+    }
+    .wallet_card {
+        width: 100%;
+        padding: 21px 0;
+        &:last-child {
+            .wallet_card_number {
+                border-bottom: 0;
+            }
+        }
+        label {
+            position: relative;
+            width: 100%;
+            @extend %display-flex-row;
+        }
+        .wallet_card_checkbox {
+            @extend %display-flex-row;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            background: #FAFAFA;
+            border: 1px solid #CCCCCC;
+            border-radius: 50%;
+        }
+        .wallet_card_number {
+            width: 243px;
+            padding: 21px 0;
+            border-bottom: 2px solid #DDDDDD;
+            font-weight: 600;
+            font-size: 15px;
+            letter-spacing: 1.5px;
+            color: #222222;
+        }
+        input[type=checkbox] {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 3;
+        }
+    }
+    .wallet_card__active {
+        .wallet_card_checkbox {
+            background: #CCCCCC;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .wallet {
+        left: 0;
+        width: 90vw;
+    }
+}

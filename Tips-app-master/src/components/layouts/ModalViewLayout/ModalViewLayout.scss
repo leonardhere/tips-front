@@ -1,0 +1,59 @@
+@import '../../../common/styles/variables.scss';
+@import '../../../common/styles/mixins.scss';
+
+.modal-view-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    @extend %display-flex-row;
+    justify-content: center;
+    background: rgba(150, 173, 255, 0.55);
+    z-index: 30;
+    .close-modal-btn {
+        position: absolute;
+        top: 25px;
+        // left: calc(50% - 13px);
+        width: 26px;
+        right: 25px;
+        height: 26px;
+        border-radius: 50%;
+        background: #81FEC6;
+        text-align: center;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+            background: #6A88F3;
+        }
+        span {
+            vertical-align: middle;
+            &::before, &::after {
+                position: absolute;
+                left: 5px;
+                top: 11px;
+                content: '';
+                width: 16px;
+                height: 4px;
+                background: #FFFFFF;
+                border-radius: 30px;
+                transform: rotate(45deg);
+            }
+            &::after {
+                transform: rotate(135deg);
+            }
+        }
+    }
+    .modal-view {
+        position: relative;
+        // width: 656px;
+        // height: 438px;
+        background: #FFFFFF;
+        box-shadow: 0px 54px 64px rgba(8, 14, 71, 0.3);
+        border-radius: 57px;
+
+        @include xs-down {
+            width: calc(100% - 60px);
+        }
+    }
+}

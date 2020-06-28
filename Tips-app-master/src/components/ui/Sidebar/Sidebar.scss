@@ -1,0 +1,237 @@
+@import '../../../common/styles/variables.scss';
+@import '../../../common/styles/mixins.scss';
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100vw - 116px);
+    height: 97px;
+    padding: 39px 30px;
+    box-sizing: border-box;
+    @extend %display-flex-row;
+    justify-content: flex-end;
+    background: $sidebarBackgroundColor;
+
+    @include xs-down {
+        width: 100%;
+        justify-content: space-between;
+
+        .activity-btn {
+            margin-right: 0;
+        }
+    }
+
+    .active-tab-btn {
+        background-color: rgba($color: #000000, $alpha: .1);
+    }
+    .activity-btn {
+        background: rgba(229, 242, 244, 0.4) url('../../../assets/images/sidebar/activity.svg') center no-repeat;
+    }
+    .withdrawal-btn {
+        margin-right: calc(100% - 417px - 180px);
+        width: 416px;
+        height: 57px;
+        padding: 0 27px;
+        box-sizing: border-box;
+        @extend %display-flex-row;
+        justify-content: flex-start;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 22.37px rgba(161, 161, 161, 0.25);
+        border-radius: 10px;
+        text-align: left;
+        font-family: "Gill Sans SemiBold";
+        font-weight: 600;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #222222;
+
+        &:hover {
+            background-color: rgba($color: #000000, $alpha: .01);
+        }
+        img {
+            padding-right: 21px;
+        }
+
+        @include xs-down {
+            margin-right: 0;
+            width: 65px;
+            padding: 0 8px;
+            order: 2;
+
+            img {
+                padding-right: 0;
+            }
+        }
+    }
+    .wallet-container,
+    .profile-menu-container {
+        position: relative;
+        width: 0;
+        height: 0;
+
+        @include xs-down {
+            position: absolute;
+            left: 0;
+        }
+    }
+    button {
+        width: 57px;
+        height: 57px;
+        background-position: center;
+        margin-right: 34px;
+        border-radius: 50%;
+        border: 0;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        transition: 0.2s;
+        outline: none;
+        cursor: pointer;
+
+        @include xs-down {
+            order: 2;
+        }
+
+        &:hover {
+            background-color: rgba($color: #5e8abd, $alpha: .1);
+        }
+    }
+    // Burger Button
+    .burger-menu-btn {
+        width: 28px;
+        height: 14.4px;
+        margin-right: 0;
+        padding: 3px;
+        border: 0;
+        &:hover {
+            background: transparent;
+        }
+
+        @include xs-down {
+            order: 1;
+        }
+    }
+    .burger-menu-btn__active {
+        height: 20px;
+        justify-content: center;
+        flex-direction: column;
+        span {
+            height: 1.5px;
+            width: 28px;
+            // background-color: #FFFFFF;
+        }
+        & span:nth-child(1) {
+            transform: rotate(42deg);
+            transform-origin: left;
+            width: 28px;
+        }
+        & span:nth-child(2) {
+            opacity: 0;
+        }
+        & span:nth-child(3) {
+            transform: rotate(-42deg);
+            transform-origin: left;
+            width: 28px;
+        }
+    }
+    // Profile menu toggle
+    .profile-menu-toggle {
+        width: 54px;
+        height: 34px;
+        margin-right: 15px;
+        padding: 5px 10px;
+        @extend %display-flex-row;
+        border-radius: 8px;
+        cursor: pointer;
+
+        @include xs-down {
+            margin-right: 0;
+            order: 4;
+        }
+
+        .avatar {
+            width: 54px;
+            height: 54px;
+            margin-right: 0;
+            border-radius: 50%;
+            background-color: #aac8e9;
+            box-shadow: 0px 15px 25px rgba(150, 173, 255, 0.45);
+            &::after {
+                content: '';
+                display: inline-block;
+                align-self: center;
+                margin-left: 63.25px;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: #81FEC6;
+            }
+        }
+    }
+}
+
+// Burger
+.burger-menu-btn {
+    width: 28px;
+    height: 14.4px;
+    padding: 3px;
+    border: 0;
+    position: relative;
+    @extend %display-flex-column;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: transparent;
+    color: #ffffff;
+    outline: none !important;
+    cursor: pointer;
+    z-index: 10;
+    span {
+        height: 2px;
+        width: 28px;
+        right: 0;
+	    position: absolute;
+        display: block;
+        background-color: #222222;
+	    border-radius: 2px;
+	    transition: 0.3s linear;
+        z-index: 201;
+    }
+    & span:nth-child(1) {
+        width: 28px;
+        top: 0;
+    }
+    & span:nth-child(2) {
+        top: 46%;
+        right: 0;
+        width: 21px;
+        height: 1.5px;
+    }
+    & span:nth-child(3) {
+        width: 15px;
+        bottom: 0;
+        height: 1.5px;
+    }
+}
+
+// @media screen and (max-width: 768px) {
+//     .sidebar {
+//         width: calc(100vw - 84px);
+//     }
+// }
+
+// Mobile
+// @media screen and (max-width: 600px) {
+//     .sidebar {
+//         width: 100vw;
+//         padding: 22px 20px;
+//         left: 0;
+//         justify-content: space-between;
+//         .profile-menu-toggle {
+//             order: 1;
+//         }
+//         button {
+//             order: 2;
+//         }
+//     }
+// }

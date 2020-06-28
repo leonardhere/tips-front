@@ -1,0 +1,31 @@
+@import '../../../common/styles/variables.scss';
+
+.view-container {
+    position: absolute;
+    top: 131px;
+    left: 116px;
+    right: 8px;
+    bottom: 0;
+    height: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+    // box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .view-container {
+        left: 120px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .view-container {
+        left: 0;
+        padding: 0 30px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+}

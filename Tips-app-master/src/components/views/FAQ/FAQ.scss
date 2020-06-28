@@ -1,0 +1,68 @@
+@import '../../../common/styles/variables.scss';
+
+.faq {
+    margin-top: 56px;
+    width: 100%;
+    padding: 35px 42px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    transition: 0.3s;
+    .question {
+        width: 100%;
+        padding: 36px 0;
+        border-bottom: 4px solid rgba(82, 80, 80, 0.2);
+        @extend %display-flex-column;
+        button {
+            width: 100%;
+            padding: 36px 0;
+            @extend %display-flex-row;
+            background: none;
+            border: 0;
+            font-weight: 600;
+            font-size: 15px;
+            letter-spacing: 1.5px;
+            color: #222222;
+        }
+        p {
+            width: 100%;
+            // height: 100px;
+            font-weight: 400;
+            font-size: 15px;
+            letter-spacing: 1.5px;
+            color: #5C5C5C;
+        }
+    }
+    h3 {
+        margin-top: 59px;
+    }
+    input {
+        margin-top: 21px;
+        width: 425px;
+        height: 94px;
+        padding: 15px 21px;
+        box-sizing: border-box;
+        border: 0;
+        background: #F2F2F2;
+        outline: none;
+        font-weight: 600;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        color: #474747;
+    }
+    .main-btn {
+        vertical-align: bottom;
+        margin-left: 33px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .faq {
+        input {
+            width: 100%;
+        }
+        .main-btn {
+            margin-top: 20px;
+            margin-left: 0;
+        }
+    }
+}

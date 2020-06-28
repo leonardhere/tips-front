@@ -1,0 +1,45 @@
+@import '../../../common/styles/variables.scss';
+@import '../../../common/styles/mixins.scss';
+
+.home {
+    width: 100%;
+    @extend %display-flex-row;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    .table-container {
+        width: 809px;
+        height: 700px;
+    }
+
+    @include xs-down {
+        flex-direction: column;
+
+        .table-container {
+            width: calc(100% - 60px);
+        }
+    }
+}
+
+@media screen and (max-width: 1430px) {
+    .home {
+        .table-container {
+            width: 759px;
+        }
+    }
+}
+
+@media screen and (max-width: 1375px) {
+    .home {
+        .table-container {
+            width: 700px;
+        }
+    }
+}
+
+@media screen and (max-width: 1320px) and (min-width: 900px) {
+    .home {
+        .table-container {
+            width: 55%;
+        }
+    }
+}

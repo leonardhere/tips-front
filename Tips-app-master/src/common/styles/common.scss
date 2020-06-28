@@ -1,0 +1,393 @@
+@import './variables.scss';
+@import './mixins.scss';
+@import '../../assets/fonts/fonts.css';
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+}
+
+h2,
+h3,
+p,
+a,
+span,
+label,
+input,
+button,
+td,
+th {
+    // font-family: "Montserrat";
+    font-family: "Gill Sans";
+    // font-style: normal;
+    font-weight: 400;
+}
+
+td,
+th {
+    font-family: 'Montserrat';
+}
+
+h1 {
+    font-family: "Gill Sans SemiBold";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    color: #000000;
+}
+
+h2 {
+    font-family: "Gill Sans SemiBold";
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: 0.65px;
+    color: #222222;
+}
+
+h3 {
+    font-family: "Gill Sans SemiBold";
+    font-weight: 600;
+    font-size: 19px;
+    letter-spacing: 1.5px;
+    color: #222222;
+}
+
+button, a {
+    outline: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+// text, email, password fields
+.main-input {
+    width: 312px;
+    height: 56px;
+    padding: 18px 16px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #C2C3CC;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    color: #AAAAAA;
+    outline: none;
+    &:hover {
+        border: 1px solid rgb(167, 167, 167);
+    }
+    &:focus {
+        border: 2px solid #81FEC6;
+    }
+    &:disabled {
+        background: #FAFAFA;
+        border: 2px solid #E0E0E0;
+    }
+    // &:invalid {
+    //     border: 2px solid #EB5757;
+    // }
+}
+
+.main-input_with-label {
+    width: 312px;
+    height: 56px;
+    position: relative;
+
+    label {
+        position: absolute;
+        display: inline-block;
+        top: 18px;
+        left: 16px;
+        background: #FFFFFF;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 0.15px;
+        color: #7C7E92;
+        border-radius: 4px;
+        transition: 0.3s;
+        z-index: 1;
+    }
+    .main-input {
+        &:focus + label {
+            left: 14px;
+            top: -8px;
+            font-size: 12px;
+            letter-spacing: 0.4px;
+            color: #222222;
+        }
+    }
+    .filled-input_label {
+        left: 14px;
+        top: -8px;
+        font-size: 12px;
+        letter-spacing: 0.4px;
+        color: #222222;
+    }
+}
+
+.input-container {
+    width: 100%;
+    margin-top: 55px;
+    @extend %display-flex-row;
+    flex-wrap: wrap;
+    input {
+        width: calc(50% - 17.5px);
+        margin-top: 30px;
+        &:first-child,
+        &:nth-child(2) {
+            margin-top: 0;
+        }
+    }
+}
+
+.main-btn {
+    width: 312px;
+    height: 58px;
+    border: 0;
+    background: #81FEC6;
+    border-radius: 10px;
+    // box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.15);
+    font-family: "Gill Sans SemiBold";
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 0.802294px;
+    text-transform: uppercase;
+    color: #222222;
+    &:hover {
+        background: #69EDB2;
+        box-shadow: 0px 4px 31px #91FFCD;
+    }
+    &:active {
+        box-shadow: none;
+    }
+    &:disabled {
+        background: #E9EAED;
+    }
+}
+
+.main-select-container {
+    position: relative;
+    width: 312px;
+    height: 56px;
+    max-height: 56px;
+    .main-input {
+        &:disabled {
+            background: none;
+            border: 1px solid #C2C3CC;
+            cursor: pointer;
+        }
+    }
+    .main-select {
+        position: absolute;
+        top: 105%;
+        width: 100%;
+        max-height: 140px;
+        border-radius: 10px;
+        background: #FFFFFF;
+        border: 1px solid #C2C3CC;
+        p {
+            width: 100%;
+            padding: 20px 16px;
+            box-sizing: border-box;
+            border-bottom: 0.5px solid #C2C3CC;
+            text-align: left;
+            font-size: 16px;
+            letter-spacing: 0.15px;
+            color: #7C7E92;
+            cursor: pointer;
+        }
+    }
+}
+
+.table-heading-container {
+    @extend %display-flex-row;
+}
+
+// Pages switches
+.switches-container {
+    margin-top: 44px;
+    @extend %display-flex-row;
+    justify-content: flex-start;
+    button {
+        width: 34px;
+        height: 32px;
+        @extend %display-flex-row;
+        justify-content: space-around;  
+        box-sizing: border-box;
+        border: 1px solid #F3F3F3;
+        border-left: 0;
+        background: transparent;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        text-align: center;
+        color: #075497;
+        outline: none;
+        cursor: pointer;
+        &:first-child {
+            border-left: 1px solid #F3F3F3;
+        }
+    }
+}
+
+.switch-checkbox-input {
+    width: 100%;
+    @extend %display-flex-row;
+    padding: 23px 0 23px;
+    border-bottom: 0.5px solid #E6E6E6;
+    font-size: 16px;
+    color: #222F35;
+    label {
+        position: relative;
+        width: 41px;
+        height: 24px;
+        background: #FBFBFB;
+        box-shadow: inset 0px 4px 30px rgba(0, 0, 0, 0.05);
+        border-radius: 100px;
+        transition: 0.3s;
+        span {
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background: #FFFFFF;
+            transition: 0.3s;
+        }
+    }
+    .switch-checkbox-input_active-label {
+        background: linear-gradient(180deg, #3173AD 0%, #075497 100%);
+        box-shadow: inset 0px 4px 30px rgba(0, 0, 0, 0.05);
+        border-radius: 100px;
+        span {
+            left: 19px;
+        }
+    }
+    input[type="checkbox"] {
+        position: absolute;
+        left: -5px;
+        width: 55px;
+        height: 34px;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 2;
+    }
+}
+
+.checkbox-input {
+    position: relative;
+    @extend %display-flex-row;
+    justify-content: flex-start;
+    .checkbox-icon {
+        order: 1;
+        @extend %display-flex-row;
+        justify-content: center;
+        width: 31px;
+        height: 31px;
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 2px solid #96ADFF;
+        border-radius: 50%;
+    }
+    .checkbox-label {
+        order: 2;
+        margin-left: 14px;
+        padding: 21px 0;
+        font-weight: 600;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        color: #222222;
+    }
+    input[type=checkbox], input[type=radio] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 3;
+    }
+    input[type=checkbox]:hover + .checkbox-icon,
+    input[type=radio]:hover + .checkbox-icon {
+        background: #E4EAFF;
+    }
+    input[type=checkbox]:checked + .checkbox-icon,
+    input[type=radio]:checked + .checkbox-icon {
+        background: #96ADFF 15px;
+    }
+}
+
+.password-changing {
+    padding: 23px 0 23px;
+    &_form {
+        width: 100%;
+        margin-top: 23px;
+        @extend %display-flex-row;
+        input {
+            width: 209px;
+            height: 53px;
+            padding: 20px 11px;
+            box-sizing: border-box;
+            background: #FBFBFB;
+            border: 0.5px solid #DDDDDD;
+            box-sizing: border-box;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #000000;
+        }
+        button {
+            width: 160px;
+            height: 53px;
+            @extend %display-flex-row;
+            padding: 17px 24px;
+            box-sizing: border-box;
+            background: linear-gradient(180deg, #3173AD 0%, #075497 100%);
+            box-shadow: inset 0px 4px 30px rgba(0, 0, 0, 0.05);
+            border: 0;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #FFFFFF;
+            &:disabled {
+                background: #EEEEEE;
+                box-shadow: inset 0px 4px 30px rgba(0, 0, 0, 0.05);
+                border-radius: 10px;
+                cursor: default;
+            }
+        }
+    }
+}
+
+.error-modal-container {
+    position: relative;
+    width: 0;
+    height: 0;
+}
+
+
+// Mobile
+@media screen and (max-width: 600px) {
+    .input-container {
+        input {
+            width: 100%;
+            &:first-child,
+            &:nth-child(2) {
+                margin-top: 30px;
+            }
+        }
+    }
+    .auth-component {
+        width: 100vw;
+        height: 100vh;
+        padding: 24px;
+        box-sizing: border-box;
+        .auth-form {
+            width: 100%;
+        }
+    }
+}

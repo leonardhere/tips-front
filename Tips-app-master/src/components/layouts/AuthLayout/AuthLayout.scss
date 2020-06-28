@@ -1,0 +1,113 @@
+@import '../../../common/styles/variables.scss';
+@import '../../../common/styles/mixins.scss';
+
+.svg-bg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #F9FEFF;
+    z-index: 4;
+    img {
+        position: absolute;
+        transition: 0.3s;
+    }
+    .blue-spot {
+        bottom: -20px;
+        right: -20px;
+    }
+    .green-spot {
+        top: -20px;
+        left: -50px;
+    }
+    .gray-spot {
+        bottom: 50px;
+        left: -82px;
+    }
+    .female {
+        top: 385px;
+        left: 1263px;
+    }
+    .male {
+        top: 270px;
+        left: 126px;
+    }
+    .form-icon {
+        top: 133px;
+        left: 1163px;
+    }
+}
+
+// Auth Components Styles
+.auth-component {
+    width: 100vw;
+    height: 100vh;
+    // background: linear-gradient(to right, $landingBg, $landingBg), url('../../../assets/images/landing-bg.jpg');
+    @extend %display-flex-column;
+    justify-content: center;
+    // background: $authBackground;
+    overflow-y: auto;
+    z-index: 5;
+    h1 {
+        width: 100%;
+        font-family: 'Advent Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: 0.75px;
+        color: #222222;
+    }
+    .input-row {
+        width: 312px;
+        height: 30px;
+        @extend %display-flex-row;  
+    }
+    .auth-form {
+        width: 722px;
+        height: 400px;
+        @extend %display-flex-column;
+        box-sizing: border-box;
+        padding: 45px 39px;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 22.37px rgba(162, 162, 162, 0.18);
+        border-radius: 30px;
+        input {
+            font-weight: 600;
+        }
+
+        @include xs-down {
+            width: 100%;
+            margin: 0 16px;
+
+            .main-input {
+                width: 100%;
+            }
+        }
+    }
+    .registration-form {
+        width: 722px;
+        height: 535px;
+        text-align: center;
+        span {
+            font-weight: 500;
+        }
+        .checkbox-input {
+            .checkbox-icon {
+                width: 26px;
+                height: 26px;
+            }
+        }
+
+        @include xs-down {
+            width: 100%;
+            padding: 0 10px;
+            box-sizing: border-box;
+            margin: 0 16px;
+
+            .main-input {
+                width: 100%;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,20 @@
+@import '../../../common/styles/variables.scss';
+@import '../../../common/styles/mixins.scss';
+
+.goal-form {
+    width: 510px;
+    height: 419px;
+    padding: 35px 40px;
+    box-sizing: border-box;
+    @extend %display-flex-column;
+    align-items: flex-start;
+    .main-input_with-label,
+    .main-input,
+    .main-btn {
+        width: 100%;
+    }
+
+    @include xs-down {
+        width: 100%;
+    }
+}

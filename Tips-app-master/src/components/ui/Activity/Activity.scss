@@ -1,0 +1,45 @@
+@import '../../../common/styles/variables.scss';
+
+.activity-container {
+    position: relative;
+    width: 298px;
+    height: 494px;
+    padding: 29px 16px;
+    box-sizing: border-box;
+    z-index: 2;
+    .clear-btn {
+        position: absolute;
+        top: 27px;
+        right: 20px;
+        font-size: 13px;
+        text-align: right;
+        color: #7E7E7E;
+        z-index: 2;
+    }
+    h2 {
+        font-size: 20px;
+        letter-spacing: 0.802294px;
+        color: #000000;
+    }
+    .notifications-cards-container {
+        width: 100%;
+        max-height: 414px;
+        @extend %display-flex-column;
+        justify-content: flex-start;
+        .notification-card {
+            position: relative;
+            margin-top: 10px;
+            width: 100%;
+            height: 96px;
+            padding: 15px 15px 15px 55px;
+            box-sizing: border-box;
+            background: rgba(236, 240, 255, 0.4);
+            border-radius: 20px;
+            img {
+                position: absolute;
+                top: 19px;
+                left: 18px;
+            }
+        }
+    }
+}

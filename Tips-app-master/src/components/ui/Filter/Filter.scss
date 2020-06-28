@@ -1,0 +1,62 @@
+@import '../../../common/styles/variables.scss';
+@import '../../../common/styles/mixins.scss';
+@import '../../../assets/libs/react-dates/lib/css/_datepicker.css';
+
+.filter {
+    position: relative;
+    width: 291px;
+    height: 24px;
+    @extend %display-flex-column;
+    align-items: flex-end;
+    text-align: right;
+    z-index: 1;
+    .toggle-filter-btn {
+        width: 34px;
+        height: 34px;
+        // padding: 10px;
+        background: none;
+        border: 0;
+        font-weight: 600;
+        font-size: 26px;
+        text-align: right;
+        letter-spacing: 0.65px;
+        color: #222222;
+    }
+    .date-range-container {
+        position: absolute;
+        left: -60px;
+        top: 59px;
+        width: 301px;
+        height: 478px;
+        padding: 25px 30px;
+        background: #FFFFFF;
+        box-shadow: 5px 4px 30px rgba(67, 77, 116, 0.22);
+        border-radius: 20px;
+        text-align: right;
+
+        @include xs-down {
+            left: -156px;
+            width: calc(100vw - 122px);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -11px;
+            left: 88%;
+            width: 22px;
+            height: 22px;
+            background: #FFFFFF;
+            transform: rotate(45deg);
+        }
+        p {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 15px;
+            letter-spacing: 1.5px;
+            color: #222222;            
+            cursor: pointer;
+        }
+    }
+}

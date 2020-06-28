@@ -1,0 +1,66 @@
+@import '../../../common/styles/variables.scss';
+
+// svg {position: absolute;}
+
+.preloader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: visible;
+  touch-action: pan-y;
+  
+  .ball {
+    border-radius: 100%;
+    transform-origin: 50%;
+    
+    &-1 { animation: pull-left $preloader-anim-speed linear infinite; }
+    &-2 { animation: jump $preloader-anim-speed linear infinite; }
+    &-3 { animation: pull-right $preloader-anim-speed linear infinite; }
+  }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(720deg) }
+}
+
+@keyframes pull-left {
+  0% { transform: translate(200px, 0) }
+  10% { transform: translate(100px, -50px) }
+  15% { transform: translate(50px, -35px) }
+  20% { transform: translate(0, 0) }
+  30% { transform: translate(0, -50px) }
+  40% { transform: translate(0, 0) }
+  50% { transform: translate(0, -50px) }
+  60% { transform: translate(0, 0) }
+  70% { transform: translate(0, -50px) }
+  80%, 90% { transform: translate(0, 0) }
+  100% { transform: translate(200px, 0) }
+}
+
+@keyframes jump {
+  0%, 23% { transform: translateY(0) }
+  33% { transform: translateY(-50px) }
+  43% { transform: translateY(0) }
+  53% { transform: translateY(-50px) }
+  63% { transform: translateY(0) }  
+  73% { transform: translateY(-50px) }
+  83%, 100% { transform: translateY(0) }
+}
+
+@keyframes pull-right {
+  0% { transform: translate(-200px, 0) }
+  10% { transform: translate(-100px, -50px) }
+  15% { transform: translate(-50px, -35px) }
+  20%, 26% { transform: translate(0, 0) }
+  36% { transform: translate(0, -50px) }
+  46% { transform: translate(0, 0) }
+  56% { transform: translate(0, -50px) }
+  66% { transform: translate(0, 0) }
+  76% { transform: translate(0, -50px) }
+  86%, 90% { transform: translate(0, 0) }
+  100% { transform: translate(-200px, 0) }
+}

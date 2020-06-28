@@ -1,0 +1,37 @@
+// Desktop First
+$screen-xs-down: 576px;
+$screen-sm-down: 767px;
+$screen-md-down: 1023px;
+$screen-lg-down: 1170px;
+$screen-xl-down: 1440px;
+
+// Desktop First
+@mixin xl-down {
+  @media only screen and (max-width: $screen-xl-down) {
+    @content;
+  }
+}
+
+@mixin lg-down {
+  @media only screen and (max-width: $screen-lg-down) {
+    @content;
+  }
+}
+
+@mixin md-down {
+  @media only screen and (max-width: $screen-md-down) {
+    @content;
+  }
+}
+
+@mixin sm-down {
+  @media only screen and (max-width: $screen-sm-down) {
+    @content;
+  }
+}
+
+@mixin xs-down {
+  @media only screen and (max-width: $screen-xs-down) {
+    @content;
+  }
+}
