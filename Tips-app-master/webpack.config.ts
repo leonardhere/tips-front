@@ -68,7 +68,7 @@ const devServer = () => ({
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
-        port: 80,
+        port: 4000,
         progress: true
     },
     devtool: "inline-source-map"
