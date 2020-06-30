@@ -56,7 +56,6 @@ const Withdrawal = () => {
                 <input type="text" {...withdrawalField} id="withdrawal-value" className="main-input" required />
                 <label htmlFor="withdrawal-value" className={withdrawalField.value === '' ? 'null' : 'filled-input_label'}>Введите сумму</label>
             </div> */}
-            <div>Баланс {}</div>
             <div className="input-row">
                 <label htmlFor="mastercard" className="checkbox-input">
                     <span className="checkbox-label">Mastercard</span>
