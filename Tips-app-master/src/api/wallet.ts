@@ -14,7 +14,7 @@ export const WalletAPI = {
     
     withdraw(value:number):Promise<AxiosResponse<WalletResponse>> {
         return axios.post(`${environment.apiEndPoint}/Wallet/Withdraw`, {
-            balance: value
+            cardType: value
         },
         {
             headers: { 'Authorization' : localStorage.getItem('token'),
