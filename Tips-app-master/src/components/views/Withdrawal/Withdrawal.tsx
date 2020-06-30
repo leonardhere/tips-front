@@ -30,6 +30,10 @@ const Withdrawal = () => {
             setBalanceError(true);
             setTimeout(() => setBalanceError(false), 3000);
             return;
+            console.log(withdrawalField.value);
+            console.log(balanceState.balance);
+            
+            
         }
         WalletAPI.withdraw(+withdrawalField.value)
             .then((response:AxiosResponse<WalletResponse>) => {
@@ -48,10 +52,11 @@ const Withdrawal = () => {
     return(
         <form className="withdrawal" onSubmit={withdraw}>
             <h2>TRANSFER HUB</h2>
-            <div className="main-input_with-label">
+            {/* <div className="main-input_with-label">
                 <input type="text" {...withdrawalField} id="withdrawal-value" className="main-input" required />
                 <label htmlFor="withdrawal-value" className={withdrawalField.value === '' ? 'null' : 'filled-input_label'}>Введите сумму</label>
-            </div>
+            </div> */}
+            <div>Баланс {}</div>
             <div className="input-row">
                 <label htmlFor="mastercard" className="checkbox-input">
                     <span className="checkbox-label">Mastercard</span>

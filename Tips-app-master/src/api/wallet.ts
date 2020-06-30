@@ -17,7 +17,9 @@ export const WalletAPI = {
             balance: value
         },
         {
-            headers: { 'Authorization' : localStorage.getItem('token') }
+            headers: { 'Authorization' : localStorage.getItem('token'),
+                        'Access-Control-Allow-Origin' : '*'
+                    }
         })
     }
 }

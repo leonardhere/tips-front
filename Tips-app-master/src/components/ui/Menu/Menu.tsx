@@ -13,7 +13,7 @@ const Menu = (props:{vision:boolean, closeMenu:any}) => {
         { icon: logo, path: '/main', name:'etiquette' },
         { icon: homeIcon, path: '/home', name:'Dashboard' },
         { icon: qrIcon, path: '/home/qr-code', name:'QR-code' },
-        { icon: privacyIcon, path: '/policy-privacy', name:'Conf' }
+        { icon: privacyIcon, path: '../../../assets/files/pol.pdf', name:'Conf' }
     ];
 
     const [windowWidth, setWindowWidth] = useState(document.documentElement.clientWidth);

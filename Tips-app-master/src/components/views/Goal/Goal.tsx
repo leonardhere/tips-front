@@ -89,7 +89,7 @@ const Goal = () => {
                 <label htmlFor="goal" className={goalName.value === '' ? 'null' : 'filled-input_label'}>Название цели</label>
             </div>
             <div className="main-input_with-label">
-                <input type="date" name="date" {...endDate}  id="period" className="main-input" required />
+                <input type="date" name="date" {...endDate}  id="period" className="main-input" max="2999-12-31" required />
                 <label htmlFor="period" className={endDate.value === '' ? 'null' : 'filled-input_label'}>Дата</label>
             </div>
             <div className="main-input_with-label">
