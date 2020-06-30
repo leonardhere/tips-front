@@ -46,8 +46,8 @@ const Withdrawal = () => {
     
         WalletAPI.withdraw(cardType)
             .then((response:AxiosResponse<WalletResponse>) => {
-                this.
-                //withdrawalField.onChange({target: { value: response.data.balance }})
+                
+
             })
             .catch((err:AxiosError) => console.log(err))
     }
@@ -78,7 +78,7 @@ const Withdrawal = () => {
                     <span className="checkbox-icon"></span>
                 </label>
             </div>
-            <button type="submit" className={ balanceError ? "main-btn balance-error" : "main-btn" }>Получить</button>
+            <button type="submit" className={ balanceError ? "main-btn balance-error" : "main-btn" } >Получить</button>
         </form>
     );
 }
