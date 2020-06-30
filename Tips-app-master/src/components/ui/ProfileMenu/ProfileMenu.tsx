@@ -1,8 +1,11 @@
 import React from 'react';
 import './ProfileMenu.scss';
 import { NavLink, useHistory } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { setAuthState, setLogOutState } from '../../../store/actions/auth-actions';
 
 const ProfileMenu = (props:{closeMenu:any}) => {
+    const dispatch = useDispatch();
     const history = useHistory();
     const handleLogoutClick = () => {
         localStorage.removeItem('token');
@@ -10,6 +13,11 @@ const ProfileMenu = (props:{closeMenu:any}) => {
         localStorage.removeItem('qrcode');
         localStorage.clear();
         history.push('/authorization');
+       
+        dispatch(setLogOutState({
+            isLoggedIn: false,
+            token: ""
+        }));
     }
 
     return(

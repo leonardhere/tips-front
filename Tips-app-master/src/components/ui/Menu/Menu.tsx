@@ -7,6 +7,8 @@ import qrIcon from '../../../assets/images/menu/qr.svg';
 import privacyIcon from '../../../assets/images/menu/union.svg';
 import logoutIcon from '../../../assets/images/logout.svg';
 import { link } from 'fs';
+import { useDispatch } from 'react-redux';
+import { setLogOutState } from '../../../store/actions/auth-actions';
 
 const Menu = (props:{vision:boolean, closeMenu:any}) => {
     const links = [
@@ -17,7 +19,7 @@ const Menu = (props:{vision:boolean, closeMenu:any}) => {
     ];
 
     const [windowWidth, setWindowWidth] = useState(document.documentElement.clientWidth);
-
+    const dispatch = useDispatch();
     const history = useHistory();
     const handleLogoutClick = () => {
         localStorage.removeItem('token');
@@ -25,6 +27,11 @@ const Menu = (props:{vision:boolean, closeMenu:any}) => {
         localStorage.removeItem('qrcode');
         localStorage.clear();
         history.push('/authorization');
+       
+        dispatch(setLogOutState({
+            isLoggedIn: false,
+            token: ""
+        }));
     }
 
     useEffect(() => document.body.onresize = () => setWindowWidth(document.documentElement.clientWidth))

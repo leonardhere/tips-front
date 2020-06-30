@@ -8,3 +8,11 @@ export const setAuthState = (action:AuthAction) => {
         token: action.token
     }
 }
+
+export const setLogOutState = (action:AuthAction) => {
+    return {
+        type: actionsConstants.LOG_OUT,
+        isLoggedIn: action.isLoggedIn,
+        token: action.token
+    }
+}

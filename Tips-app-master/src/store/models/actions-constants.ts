@@ -1,5 +1,6 @@
 const actionsConstants = {
     LOG_IN: 'LOG_IN',
+    LOG_OUT: 'USER_LOGGED_OUT',
     SET_REVIEWS: 'SET_REVIEWS',
     SET_PROFILE_DATA: 'SET_PROFILE_DATA',
     SET_BALANCE: 'SET_BALANCE',
