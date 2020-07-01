@@ -5,7 +5,7 @@ import { auth } from '../../../../api/auth';
 import { AuthResponse } from '../../../../api/models/response/auth-response.model';
 import { AxiosResponse } from 'axios';
 import { useDispatch } from 'react-redux';
-import { setAuthState } from '../../../../store/actions/auth-actions';
+import { setAuthState, setLogOutState } from '../../../../store/actions/auth-actions';
 import ErrorModal from '../../../ui/ErrorModal/ErrorModal';
 import { CSSTransition } from 'react-transition-group';
 import { useHistory } from 'react-router';
@@ -24,6 +24,8 @@ const Authorization = () => {
         e.preventDefault();
         auth(login, password)
         .then((response:AxiosResponse<AuthResponse>) => {
+            dispatch(setLogOutState());
+            localStorage.removeItem('qrcode');
             localStorage.setItem('token', `Bearer ${response.data.token.token}`);
             localStorage.setItem('expireDate', response.data.token.expireDate);
             dispatch(setAuthState({isLoggedIn: true, token: `Bearer ${response.data.token.token}`}));
