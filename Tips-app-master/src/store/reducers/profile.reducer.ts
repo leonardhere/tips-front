@@ -58,6 +58,22 @@ export const ProfileReducer = (
                 ...state,
                 balance: 0 || action.balance
             }
+        case actionsConstants.LOG_OUT:
+            return {
+                ...state,
+                userID: NaN,
+                restaurant: {
+                    restaurantId: NaN,
+                    name: '',
+                    phoneNumber: '',
+                    address: '',
+                    createDate: ''
+                },
+                person: {
+                    photoUrl: undefined, name: '', email: '', address: '', passport:'', sex: NaN
+                },
+                balance: NaN
+            }
         default:
             return state;
     }

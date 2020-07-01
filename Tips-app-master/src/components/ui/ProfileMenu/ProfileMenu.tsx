@@ -14,10 +14,7 @@ const ProfileMenu = (props:{closeMenu:any}) => {
         localStorage.clear();
         history.push('/authorization');
        
-        dispatch(setLogOutState({
-            isLoggedIn: false,
-            token: ""
-        }));
+        dispatch(setLogOutState());
     }
 
     return(
