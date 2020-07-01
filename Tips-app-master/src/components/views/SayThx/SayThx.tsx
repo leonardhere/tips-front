@@ -195,8 +195,8 @@ const SayThx = () => {
                         <button onClick={getReplenishmentLink}>Оплатить картой</button>
                     </div>
                 </div>
-                <div id="or">or checkout with </div>
-                <div id="apple_pay_block">
+                {/* <div id="or">or checkout with </div> */}
+                <div id="apple_pay_block" hidden = {true}>
                     <div id="apple_pay_btn">
                         <img src={appleIcon} />
                     </div>
