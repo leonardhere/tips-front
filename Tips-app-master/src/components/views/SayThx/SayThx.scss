@@ -1,4 +1,6 @@
 @import './SayThx.css';
+@import './SayThx.css';
+@import '../../../common/styles/mixins.scss';
 
 .say-thx {
     position: relative;
@@ -7,4 +9,30 @@
     min-height: 100%;
     // margin-top: 250px;
     padding: 0;
+
+    .thx-spot {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        z-index: 1;
+
+       @include xs-down {
+           display: block;
+       } 
+
+        &:nth-child(2) {
+            left: initial;
+            right: 0;
+            z-index: 0;
+        }
+    }
+
+    main {
+        z-index: 5;
+    }
+
+    textarea {
+        height: 100px;
+    }
 }

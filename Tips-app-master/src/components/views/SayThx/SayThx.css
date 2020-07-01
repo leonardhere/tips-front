@@ -1,4 +1,4 @@
-:root {
+ :root {
     --pure-material-primary-rgb: 33, 150, 243;
     --pure-material-onprimary-rgb: 255, 255, 255;
     --pure-material-surface-rgb: 255, 255, 255;
@@ -71,8 +71,9 @@ div#question_block_in {
 }
 
 div#fl_block {
-    margin-top: 40px;
+    margin-top: 160px;
     text-align: center;
+    z-index: 5;
 }
 
 div#fl_photo {
@@ -163,6 +164,7 @@ div#send_block {
 
 .thx-main {
     padding: 0 20px;
+    z-index: 2;
 }
 
 .one_pay_block {
@@ -231,7 +233,8 @@ input#card_cvc {
 
 
 .one_select {
-    font-size: 12px;
+    font-weight: 600;
+    font-size: 14px;
     display: inline-block;
     padding: 5px 10px;
     background-color: #382adf;
@@ -247,13 +250,12 @@ input#card_cvc {
 .one_pay_block_btn button {
     width: 100%;
     height: 44px;
-    background-color: #382adf;
-    color: #fff;
-    font-size: 16px;
-    line-height: 44px;
-    border: 0;
-    box-shadow: none;
-    text-transform: uppercase;
+    border: 2px solid rgba(0, 0, 0, 0.85);
+    background: transparent;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #737373;
 }
 
 div#or {
@@ -264,13 +266,14 @@ div#or {
 }
 
 div#apple_pay_btn {
-    border-radius: 3px;
+    border-radius: 12px;
 }
 
 div#apple_pay_block {
     margin-top: 20px;
     height: 40px;
     border: 2px solid #333;
+    border-radius: 12px;
     text-align: center;
 }
 
@@ -451,10 +454,15 @@ div#quest_icon,
 }
 
 .one_star {
-    background-image: url('../../../assets/images/saythx/star_12.svg');
     width: 30px;
     height: 30px;
-    margin: 0 5px;
+    margin-left: 4px;
+    background: #e4e4e4;
+    border-radius: 1px;
+    border: 2px solid #81FEC6;
+    box-sizing: border-box;
+    clip-path: polygon(50% 0%, 64% 29%, 98% 35%, 71% 57%, 79% 91%, 50% 74%, 21% 91%, 29% 57%, 2% 35%, 36% 29%);
+    -webkit-clip-path: polygon(50% 0%, 64% 29%, 98% 35%, 71% 57%, 79% 91%, 50% 74%, 21% 91%, 29% 57%, 2% 35%, 36% 29%);
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -462,7 +470,8 @@ div#quest_icon,
 }
 
 .one_star.active_star {
-    background-image: url(../../../assets/images/saythx/star.svg)
+    /* background-image: url(../../../assets/images/saythx/star.svg) */
+    background: #81FEC6;
 }
 
 div#success_screen {
@@ -515,7 +524,12 @@ div#success_screen {
 }
 
 div#fl_name {
+    font-family: "Gill Sans";
+    font-weight: 600;
     font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
 }
 
 div#fl_place {
@@ -612,9 +626,9 @@ div#or {
 }
 
 .one_select {
-    background-color: #2544FF;
+    background: #96ADFF;
+    border-radius: 12px;
     border: 0;
-    border-radius: 2px;
 }
 div#bg_bg {
     z-index: 100;
@@ -623,3 +637,4 @@ div#bg_bg {
 div#question_block {
     z-index: 101;
 }
+

@@ -8,6 +8,8 @@ import closeIcon from '../../../assets/images/saythx/close.svg';
 import shadowBg from '../../../assets/images/saythx/shadow.png';
 import appleIcon from '../../../assets/images/saythx/apple.svg';
 import photoIcon from '../../../assets/images/saythx/photo.jpg';
+import greenSpot from '../../../assets/images/saythx/thxGreenSpot.svg';
+import blueSpot from '../../../assets/images/saythx/thxBlueSpot.svg';
 import { useParams } from 'react-router';
 import { OrderAPI } from '../../../api/order';
 import { OrderResponse } from '../../../api/models/response/order-response.model';
@@ -91,6 +93,8 @@ const SayThx = () => {
 
     return(
         <div className="say-thx">
+            <img src={greenSpot} className="thx-spot" alt=""/>
+            <img src={blueSpot} className="thx-spot" alt=""/>
             <header className="thx-header">
                 <div id="logo">
                     {/* <img src={logo} /> */}
@@ -133,9 +137,9 @@ const SayThx = () => {
                 </div>
                 <div id="send_block">
                     <div id="summ_block">
-                        <div id="summ_input">
-                            <input type="text" placeholder="Введите сумму" id="summ_input_input" onKeyPress={cislo} />
-                        </div>
+                        {/* <div id="summ_input"> */}
+                            <input type="text" className="main-input" placeholder="Введите сумму" id="summ_input_input" onKeyPress={cislo} />
+                        {/* </div> */}
                         <div id="select_more_summ">
                             <div id="select_1" className="one_select" data-size="100">
                                 + 100
@@ -152,9 +156,9 @@ const SayThx = () => {
                         </div>
                     </div>
                     <div id="comment_block">
-                        <div id="comment_input">
-                            <input type="text" {...review} placeholder="Оставьте отзыв" />
-                        </div>
+                        {/* <div id="comment_input"> */}
+                            <textarea className="main-input" style={{marginTop: '15px'}} {...review} placeholder="Расскажите нам о своих впечатлениях" />
+                        {/* </div> */}
                         <div id="comment_stars">
                             <div className="one_star active_star" data-number="1"></div>
                             <div className="one_star active_star" data-number="2"></div>
@@ -188,15 +192,15 @@ const SayThx = () => {
                         </label>
                     </div> */}
                     <div className="one_pay_block_btn">
-                        <button onClick={getReplenishmentLink}>Оплатить</button>
-                    </div> -->
+                        <button onClick={getReplenishmentLink}>Оплатить картой</button>
+                    </div>
                 </div>
-                {/* <div id="or">or checkout with </div>
+                <div id="or">or checkout with </div>
                 <div id="apple_pay_block">
                     <div id="apple_pay_btn">
                         <img src={appleIcon} />
                     </div>
-                </div> */}
+                </div>
             </main>
         </div>
     );
