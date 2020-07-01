@@ -37,7 +37,7 @@ const SayThx = () => {
             $("#bg_bg").fadeIn(0);
         });
     
-        $("#summ_input_input").mask("9999 руб", { placeholder: " " });
+        $("#summ_input_input").mask("9999", { placeholder: " " });
         $("#card_data").mask("99 / 99", { placeholder: " " });
         $("#card_cvc").mask("999", { placeholder: " " });
         $("#card_num").mask("9999 9999 9999 9999", { placeholder: " " });
@@ -48,7 +48,7 @@ const SayThx = () => {
     
         $(".one_select").click(function() {
             var a = $(this).data("size");
-            var b = ($("#summ_input_input").val() + '').replace('руб', '').replace(' ', '');
+            var b = ($("#summ_input_input").val() + '')
             var aa = parseInt(a);
             var bb = parseInt(b);
             if (bb > 1) {
@@ -56,7 +56,7 @@ const SayThx = () => {
             } else {
                 var c = aa;
             }
-            $("#summ_input_input").val(c + " руб");
+            $("#summ_input_input").val(c);
     
         });
         $(".one_star").click(function() {
@@ -142,16 +142,16 @@ const SayThx = () => {
                         {/* </div> */}
                         <div id="select_more_summ">
                             <div id="select_1" className="one_select" data-size="100">
-                                + 100
+                                + 100 р
                             </div>
                             <div id="select_2" className="one_select" data-size="200">
-                                + 200
+                                + 200 р
                             </div>
                             <div id="select_3" className="one_select" data-size="300">
-                                + 300
+                                + 300 р
                             </div>
                             <div id="select_4" className="one_select" data-size="500">
-                                + 500
+                                + 500 р
                             </div>
                         </div>
                     </div>
