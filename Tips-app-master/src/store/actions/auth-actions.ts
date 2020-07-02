@@ -9,10 +9,10 @@ export const setAuthState = (action:AuthAction) => {
     }
 }
 
-export const setLogOutState = () => {
+export const setLogOutState = (action:AuthAction) => {
     return {
         type: actionsConstants.LOG_OUT,
-        isLoggedIn: false,
-        token: undefined
+        isLoggedIn: action.isLoggedIn,
+        token: action.token
     }
 }

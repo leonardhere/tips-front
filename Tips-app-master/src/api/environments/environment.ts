@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    apiEndPoint: 'https://etiquette.ms:229/api'
+    apiEndPoint: 'http://194.177.23.9:228/api'
 }

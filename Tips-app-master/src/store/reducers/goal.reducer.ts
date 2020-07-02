@@ -22,18 +22,6 @@ export const GoalReducer = (state:setGoalAction={
                     ...state,
                     ...action
                 }
-            case actionsConstants.LOG_OUT:
-                return {
-                    ...state,
-                    targetId: NaN,
-                    userId: NaN,
-                    name: '',
-                    currentSumma: 0,
-                    summa: 0,
-                    startDate: '',
-                    endDate: '',
-                    isFinished: false
-                }
             default:
                 return state
         }

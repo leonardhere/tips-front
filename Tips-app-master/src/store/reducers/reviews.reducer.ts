@@ -8,8 +8,6 @@ export const ReviewsReducer = (
     switch (action.type) {
         case actionsConstants.SET_REVIEWS:
             return [...action.data] // don't copy previous state into array
-            case actionsConstants.LOG_OUT:
-                return [] 
         default:
             return state;
     }

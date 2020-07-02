@@ -158,6 +158,9 @@ a {
     letter-spacing: 0.802294px;
     text-transform: uppercase;
     color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &:hover {
         background: #69EDB2;
         box-shadow: 0px 4px 31px #91FFCD;

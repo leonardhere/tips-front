@@ -12,6 +12,8 @@ import { AvatarResponse } from '../../../api/models/response/avatar-response.mod
 import uploadAvatarIcon from '../../../assets/images/icons/upload-avatar.svg';
 import deleteIcon from '../../../assets/images/icons/delete.svg';
 import checkLoggedIn from '../../../common/checkLoggedIn';
+import { NavLink } from 'react-router-dom';
+import ModalPass from '../ModalPassword/ModalPass'
 
 const Profile = () => {
 
@@ -117,7 +119,7 @@ const Profile = () => {
     return(
         <React.Fragment>
             <div className="profile-avatar">
-                <img src={'https://etiquette.ms:230/' + profileState.person?.photoUrl} alt="" className="avatar" />
+                <img src={'http://194.177.23.9:555/' + profileState.person?.photoUrl} alt="" className="avatar" />
                 <input type="file" accept="image/x-png,image/gif,image/jpeg" onChange={onSelectFile} disabled={profileState.photoUrl} />
                 <button className={ !profileState.person.photoUrl ? 'edit-avatar-btn avatar-active-action' : 'edit-avatar-btn'}>
                     <img src={uploadAvatarIcon} alt=""/>
@@ -137,6 +139,7 @@ const Profile = () => {
                     <input type="text" {...person.restaurant} id="sum" className="main-input" disabled />
                     <label htmlFor="sum" className={person.restaurant.value === '' ? 'null' : 'filled-input_label'}>Ресторан</label>
                 </div>
+                <NavLink to="/changepassword" className="main-btn">СМЕНИТЬ ПАРОЛЬ</NavLink>
                 <button type="submit" className={saved ? "main-btn saved-state" : "main-btn"}>СОХРАНИТЬ</button>
                 <button onClick={generatePaymentLink} className={copied ? "main-btn copied-state" : "main-btn"}>Сгенерировать ссылку</button>
             </form>

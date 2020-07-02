@@ -4,6 +4,7 @@ import Registration from '../components/views/Auth/Registration/Registration';
 import AccountLayout from '../components/layouts/AccountLayout/AccountLayout';
 import AuthLayout from '../components/layouts/AuthLayout/AuthLayout';
 import ModalViewLayout from '../components/layouts/ModalViewLayout/ModalViewLayout';
+import ModalPass from '../components/views/ModalPassword/ModalPass'
 const Authorization = React.lazy(() => import('../components/views/Auth/Authorization/Authorization'));
 const Landing = React.lazy(() => import('../components/views/Landing/Landing'));
 const Home = React.lazy(() => import('../components/views/Home/Home'));
@@ -40,6 +41,7 @@ const Router = () => {
             <Route path="/home" render={props => RenderAppComponent(<Home />)} />
             <Route path="/profile" render={props => RenderAppComponent(<Profile />)} />
             <Route path="/saythx/:waiterId/:photoUrl/:name/:rest" component={SayThx} />
+            <Route path="/changepassword" render={props => RenderAppComponent(<ModalPass />)}/>
             {/* <Route path="/saythx" component={SayThx} /> */}
         </Switch>
     );

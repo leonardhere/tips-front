@@ -28,7 +28,10 @@ const Menu = (props:{vision:boolean, closeMenu:any}) => {
         localStorage.clear();
         history.push('/authorization');
        
-        dispatch(setLogOutState());
+        dispatch(setLogOutState({
+            isLoggedIn: false,
+            token: ""
+        }));
     }
 
     useEffect(() => document.body.onresize = () => setWindowWidth(document.documentElement.clientWidth))

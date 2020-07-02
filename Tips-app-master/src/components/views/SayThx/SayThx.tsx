@@ -8,8 +8,6 @@ import closeIcon from '../../../assets/images/saythx/close.svg';
 import shadowBg from '../../../assets/images/saythx/shadow.png';
 import appleIcon from '../../../assets/images/saythx/apple.svg';
 import photoIcon from '../../../assets/images/saythx/photo.jpg';
-import greenSpot from '../../../assets/images/saythx/thxGreenSpot.svg';
-import blueSpot from '../../../assets/images/saythx/thxBlueSpot.svg';
 import { useParams } from 'react-router';
 import { OrderAPI } from '../../../api/order';
 import { OrderResponse } from '../../../api/models/response/order-response.model';
@@ -37,7 +35,7 @@ const SayThx = () => {
             $("#bg_bg").fadeIn(0);
         });
     
-        $("#summ_input_input").mask("9999", { placeholder: " " });
+        $("#summ_input_input").mask("9999 руб", { placeholder: " " });
         $("#card_data").mask("99 / 99", { placeholder: " " });
         $("#card_cvc").mask("999", { placeholder: " " });
         $("#card_num").mask("9999 9999 9999 9999", { placeholder: " " });
@@ -48,7 +46,7 @@ const SayThx = () => {
     
         $(".one_select").click(function() {
             var a = $(this).data("size");
-            var b = ($("#summ_input_input").val() + '')
+            var b = ($("#summ_input_input").val() + '').replace('руб', '').replace(' ', '');
             var aa = parseInt(a);
             var bb = parseInt(b);
             if (bb > 1) {
@@ -56,7 +54,7 @@ const SayThx = () => {
             } else {
                 var c = aa;
             }
-            $("#summ_input_input").val(c);
+            $("#summ_input_input").val(c + " руб");
     
         });
         $(".one_star").click(function() {
@@ -93,8 +91,6 @@ const SayThx = () => {
 
     return(
         <div className="say-thx">
-            <img src={greenSpot} className="thx-spot" alt=""/>
-            <img src={blueSpot} className="thx-spot" alt=""/>
             <header className="thx-header">
                 <div id="logo">
                     {/* <img src={logo} /> */}
@@ -126,7 +122,7 @@ const SayThx = () => {
                 <div id="fl_block">
                     <div id="fl_photo">
                         <div id="img_round"><img src={shadowBg} /></div>
-                        <img id="img_photo" src={'https://etiquette.ms:230/' + photoUrl} alt="" />
+                        <img id="img_photo" src={'http://194.177.23.9:555/' + photoUrl} alt="" />
                     </div>
                     <div id="fl_name">
                         {name}
@@ -137,28 +133,28 @@ const SayThx = () => {
                 </div>
                 <div id="send_block">
                     <div id="summ_block">
-                        {/* <div id="summ_input"> */}
-                            <input type="text" className="main-input" placeholder="Введите сумму" id="summ_input_input" onKeyPress={cislo} />
-                        {/* </div> */}
+                        <div id="summ_input">
+                            <input type="text" placeholder="Введите сумму" id="summ_input_input" onKeyPress={cislo} />
+                        </div>
                         <div id="select_more_summ">
                             <div id="select_1" className="one_select" data-size="100">
-                                + 100 р
+                                + 100
                             </div>
                             <div id="select_2" className="one_select" data-size="200">
-                                + 200 р
+                                + 200
                             </div>
                             <div id="select_3" className="one_select" data-size="300">
-                                + 300 р
+                                + 300
                             </div>
                             <div id="select_4" className="one_select" data-size="500">
-                                + 500 р
+                                + 500
                             </div>
                         </div>
                     </div>
                     <div id="comment_block">
-                        {/* <div id="comment_input"> */}
-                            <textarea className="main-input" style={{marginTop: '15px'}} {...review} placeholder="Расскажите нам о своих впечатлениях" />
-                        {/* </div> */}
+                        <div id="comment_input">
+                            <input type="text" {...review} placeholder="Оставьте отзыв" />
+                        </div>
                         <div id="comment_stars">
                             <div className="one_star active_star" data-number="1"></div>
                             <div className="one_star active_star" data-number="2"></div>
@@ -192,15 +188,15 @@ const SayThx = () => {
                         </label>
                     </div> */}
                     <div className="one_pay_block_btn">
-                        <button onClick={getReplenishmentLink}>Оплатить картой</button>
-                    </div>
+                        <button onClick={getReplenishmentLink}>Оплатить</button>
+                    </div> -->
                 </div>
-                {/* <div id="or">or checkout with </div> */}
-                <div id="apple_pay_block" hidden = {true}>
+                {/* <div id="or">or checkout with </div>
+                <div id="apple_pay_block">
                     <div id="apple_pay_btn">
                         <img src={appleIcon} />
                     </div>
-                </div>
+                </div> */}
             </main>
         </div>
     );
