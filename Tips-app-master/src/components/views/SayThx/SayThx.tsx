@@ -126,7 +126,7 @@ const SayThx = () => {
                 <div id="fl_block">
                     <div id="fl_photo">
                         <div id="img_round"><img src={shadowBg} /></div>
-                        <img id="img_photo" src={'http://194.177.23.9:555/' + photoUrl} alt="" />
+                        <img id="img_photo" src={'https://etiquette.ms:230/' + photoUrl} alt="" />
                     </div>
                     <div id="fl_name">
                         {name}

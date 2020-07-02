@@ -60,7 +60,7 @@ const Sidebar = (props:any) => {
 
             {/* Profile Menu */}
             <div className="profile-menu-toggle" onClick={showProfileMenu}>
-                <img src={'http://194.177.23.9:555/' + profileState.person.photoUrl} alt="" className="avatar"/>
+                <img src={'https://etiquette.ms:230/' + profileState.person.photoUrl} alt="" className="avatar"/>
                 {/* <img src={profileToggleIcon} alt=""/> */}
             </div>
             <div className="profile-menu-container">

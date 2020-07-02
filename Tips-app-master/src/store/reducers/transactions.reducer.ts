@@ -9,6 +9,8 @@ export const TransactionsReducer = (
     switch (action.type) {
         case actionsConstants.SET_TRANSACTIONS:
             return [...action.data] // don't copy previous state into array
+        case actionsConstants.LOG_OUT:
+            return [] 
         default:
             return state;
     }

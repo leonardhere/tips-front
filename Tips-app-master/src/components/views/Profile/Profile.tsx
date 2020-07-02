@@ -117,7 +117,7 @@ const Profile = () => {
     return(
         <React.Fragment>
             <div className="profile-avatar">
-                <img src={'http://194.177.23.9:555/' + profileState.person?.photoUrl} alt="" className="avatar" />
+                <img src={'https://etiquette.ms:556/' + profileState.person?.photoUrl} alt="" className="avatar" />
                 <input type="file" accept="image/x-png,image/gif,image/jpeg" onChange={onSelectFile} disabled={profileState.photoUrl} />
                 <button className={ !profileState.person.photoUrl ? 'edit-avatar-btn avatar-active-action' : 'edit-avatar-btn'}>
                     <img src={uploadAvatarIcon} alt=""/>
