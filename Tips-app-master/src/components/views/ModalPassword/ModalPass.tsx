@@ -6,7 +6,7 @@ const ModalPass = () => {
 
 
 
-
+    //JSX
     return(
         <div className="ModalPass">
             <h2>Сменить пароль</h2>
